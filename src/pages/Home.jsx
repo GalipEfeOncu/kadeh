@@ -108,6 +108,13 @@ export default function Home() {
     }
   }, [isDetailMode]);
 
+  useEffect(() => {
+    if (!isDetailMode) return;
+    const onKey = (e) => { if (e.key === 'Escape') navigate('/'); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isDetailMode, navigate]);
+
   const heroHeight = heroRef.current?.offsetHeight || 1;
   const heroProgress = Math.min(1, scrollY / heroHeight);
   const heroStyle = {
