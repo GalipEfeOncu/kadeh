@@ -167,7 +167,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          {/* Floating FilterBar — hero çıkınca altta belirir */}
+          {/* Floating FilterBar, hero çıkınca altta belirir */}
           <div
             className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 transition-all duration-500"
             style={{
@@ -183,7 +183,7 @@ export default function Home() {
 
           <div ref={scrollRef} className="flex-1 overflow-y-auto custom-scrollbar">
 
-          {/* Hero — full screen, scrolls away */}
+          {/* Hero, full screen, scrolls away */}
           <div
             ref={heroRef}
             className="relative flex flex-col items-center justify-center text-center px-6 min-h-[calc(100dvh-64px)]"

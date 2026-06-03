@@ -12,7 +12,7 @@ export default function Layout({ children }) {
           </Link>
           <nav className="flex gap-6 text-sm font-medium tracking-widest uppercase text-textMuted">
             <Link to="/" className="hover:text-amberAccent transition-colors">İçkiler</Link>
-            <a href="#" className="hover:text-amberAccent transition-colors">Hakkında</a>
+            <Link to="/hakkinda" className="hover:text-amberAccent transition-colors">Hakkında</Link>
           </nav>
         </div>
       </header>
