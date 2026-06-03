@@ -12,7 +12,7 @@ export default function DrinkCard({ drink }) {
           {drink.lore_short}
         </p>
         <div className="flex flex-wrap gap-2 mt-auto">
-          {drink.tag.map((t) => (
+          {[drink.ana_tur, drink.alt_tur].filter(Boolean).map((t) => (
             <span key={t} className="text-[10px] uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full border border-[#3a2c1e] text-amberAccent">
               {t}
             </span>

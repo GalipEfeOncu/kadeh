@@ -28,7 +28,7 @@ export default function DrinkDetail({ drink }) {
         <div className="flex-1 min-w-0">
           <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-6">{drink.name}</h1>
           <div className="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-8">
-            {drink.tag.map(t => (
+            {[drink.ana_tur, drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map(t => (
               <span key={t} className="text-xs md:text-sm uppercase tracking-wider font-semibold px-3 md:px-4 py-1 md:py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
                 {t}
               </span>

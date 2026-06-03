@@ -11,7 +11,8 @@ export default function SearchOverlay({ isOpen, onClose }) {
   const results = query.trim().length > 0
     ? drinks.filter(d =>
         d.name.toLowerCase().includes(query.toLowerCase()) ||
-        d.tag.some(t => t.toLowerCase().includes(query.toLowerCase())) ||
+        d.aroma?.some(t => t.toLowerCase().includes(query.toLowerCase())) ||
+        d.ana_tur?.toLowerCase().includes(query.toLowerCase()) ||
         (d.aliases && d.aliases.some(a => a.toLowerCase().includes(query.toLowerCase())))
       )
     : drinks;
@@ -71,7 +72,7 @@ export default function SearchOverlay({ isOpen, onClose }) {
                   <span className="text-2xl flex-shrink-0 group-hover:scale-110 transition-transform">{drink.emoji}</span>
                   <div className="min-w-0">
                     <p className="font-serif text-base text-textMain group-hover:text-amberAccent transition-colors truncate">{drink.name}</p>
-                    <p className="text-xs text-textMuted uppercase tracking-wider truncate">{drink.tag.join(' • ')}</p>
+                    <p className="text-xs text-textMuted uppercase tracking-wider truncate">{[drink.ana_tur, drink.alt_tur].filter(Boolean).join(' • ')}</p>
                   </div>
                 </button>
               </li>
