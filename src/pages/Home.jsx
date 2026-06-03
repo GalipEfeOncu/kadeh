@@ -132,7 +132,7 @@ export default function Home() {
             <span className="font-serif text-lg text-textMain truncate">{selectedDrink.name}</span>
           </div>
           <div className="flex flex-1 overflow-hidden relative w-full">
-            <div className="h-full overflow-y-auto custom-scrollbar absolute left-0 top-0 bottom-0 w-full md:w-80 lg:w-96 border-r border-[#2a2015]">
+            <div className="hidden md:block h-full overflow-y-auto custom-scrollbar absolute left-0 top-0 bottom-0 md:w-80 lg:w-96 border-r border-[#2a2015]">
               <div className="px-3 py-3 border-b border-[#2a2015]">
                 <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} compact />
               </div>
@@ -160,7 +160,7 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="h-full overflow-y-auto custom-scrollbar bg-darkBg absolute right-0 top-0 bottom-0 w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)]">
+            <div className="h-full overflow-y-auto custom-scrollbar bg-darkBg absolute right-0 top-0 bottom-0 w-full md:w-[calc(100%-20rem)] lg:w-[calc(100%-24rem)] md:left-auto left-0">
               {selectedDrink && <DrinkDetail drink={selectedDrink} />}
             </div>
           </div>

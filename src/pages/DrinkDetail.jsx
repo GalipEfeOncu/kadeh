@@ -17,50 +17,53 @@ export default function DrinkDetail({ drink }) {
   ];
 
   return (
-    <div className="w-full px-6 lg:px-16 py-12 lg:py-16 max-w-6xl mx-auto">
-      <div className="flex flex-col lg:flex-row gap-10 items-start mb-16">
-        <div 
-          className="w-32 h-32 lg:w-48 lg:h-48 flex-shrink-0 rounded-3xl flex items-center justify-center text-6xl lg:text-8xl border border-[#2a2015] bg-[#1a130c] shadow-2xl"
+    <div className="w-full px-4 md:px-8 lg:px-16 py-8 md:py-12 lg:py-16 max-w-6xl mx-auto">
+      <div className="flex flex-row gap-5 md:gap-10 items-center md:items-start mb-10 md:mb-16">
+        <div
+          className="w-20 h-20 md:w-36 md:h-36 lg:w-48 lg:h-48 flex-shrink-0 rounded-2xl md:rounded-3xl flex items-center justify-center text-4xl md:text-6xl lg:text-8xl border border-[#2a2015] bg-[#1a130c] shadow-2xl"
           style={{ boxShadow: `0 20px 60px ${drink.color}15` }}
         >
           {drink.emoji}
         </div>
-        <div className="flex-1">
-          <h1 className="font-serif text-5xl lg:text-7xl font-bold mb-6">{drink.name}</h1>
-          <div className="flex flex-wrap gap-3 mb-8">
+        <div className="flex-1 min-w-0">
+          <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-6">{drink.name}</h1>
+          <div className="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-8">
             {drink.tag.map(t => (
-              <span key={t} className="text-sm uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
+              <span key={t} className="text-xs md:text-sm uppercase tracking-wider font-semibold px-3 md:px-4 py-1 md:py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
                 {t}
               </span>
             ))}
           </div>
-          <p className="text-xl lg:text-2xl text-textMuted leading-relaxed max-w-4xl">
+          <p className="hidden md:block text-xl lg:text-2xl text-textMuted leading-relaxed max-w-4xl">
             {drink.lore_short}
           </p>
         </div>
       </div>
+      <p className="md:hidden text-base text-textMuted leading-relaxed mb-8">
+        {drink.lore_short}
+      </p>
 
-      <div className="flex overflow-x-auto gap-2 lg:gap-4 mb-12 border-b border-[#2a2015] pb-px custom-scrollbar">
+      <div className="flex overflow-x-auto gap-1 md:gap-2 lg:gap-4 mb-8 md:mb-12 border-b border-[#2a2015] pb-px custom-scrollbar">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-3 px-5 py-4 text-sm lg:text-base font-medium whitespace-nowrap border-b-2 transition-colors ${
+              className={`flex items-center gap-2 px-3 md:px-5 py-3 md:py-4 text-xs md:text-sm lg:text-base font-medium whitespace-nowrap border-b-2 transition-colors ${
                 activeTab === tab.id
                   ? 'border-amberAccent text-amberAccent bg-[#2a2015]/30 rounded-t-lg'
                   : 'border-transparent text-textMuted hover:text-textMain hover:bg-[#1a130c] rounded-t-lg'
               }`}
             >
-              <Icon size={18} />
+              <Icon size={15} className="flex-shrink-0" />
               {tab.label}
             </button>
           );
         })}
       </div>
 
-      <div className="bg-[#1a130c] border border-[#2a2015] rounded-3xl p-8 lg:p-12 min-h-[500px] shadow-xl">
+      <div className="bg-[#1a130c] border border-[#2a2015] rounded-2xl md:rounded-3xl p-5 md:p-8 lg:p-12 min-h-[400px] shadow-xl">
         {activeTab === 'lore' && (
           <div>
             {/* Özet */}
