@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import { drinks } from '../data/drinks';
 import FilterBar from '../components/FilterBar';
 import DrinkDetail from './DrinkDetail';
@@ -119,11 +120,22 @@ export default function Home() {
     <div className="flex flex-col flex-1 w-full h-full overflow-hidden bg-darkBg relative">
       {isDetailMode ? (
         <>
-          <div className="px-6 lg:px-12 py-4 border-b border-[#2a2015] flex-shrink-0 z-10 bg-darkBg">
-            <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
+          <div className="px-4 lg:px-6 py-3 border-b border-[#2a2015] flex-shrink-0 z-10 bg-darkBg flex items-center gap-4">
+            <button
+              onClick={() => navigate('/')}
+              className="flex items-center gap-2 text-textMuted hover:text-amberAccent transition-colors group flex-shrink-0"
+            >
+              <ArrowLeft size={18} className="transition-transform group-hover:-translate-x-1" />
+              <span className="text-sm font-medium uppercase tracking-widest">Geri</span>
+            </button>
+            <div className="w-px h-5 bg-[#2a2015] flex-shrink-0" />
+            <span className="font-serif text-lg text-textMain truncate">{selectedDrink.name}</span>
           </div>
           <div className="flex flex-1 overflow-hidden relative w-full">
             <div className="h-full overflow-y-auto custom-scrollbar absolute left-0 top-0 bottom-0 w-full md:w-80 lg:w-96 border-r border-[#2a2015]">
+              <div className="px-3 py-3 border-b border-[#2a2015]">
+                <FilterBar activeFilter={activeFilter} setActiveFilter={setActiveFilter} compact />
+              </div>
               <div className="flex flex-col gap-2 p-4 lg:p-6">
                 {filteredDrinks.map((drink) => (
                   <button
