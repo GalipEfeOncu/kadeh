@@ -1,5 +1,5 @@
 export default function FilterBar({ activeFilter, setActiveFilter, compact = false }) {
-  const filters = ['Hepsi', 'Distilled', 'Fermented', 'Clear', 'Aged', 'Anise'];
+  const filters = ['Hepsi', 'Damıtık', 'Fermente', 'Berrak', 'Fıçılı', 'Anasonlu'];
 
   return (
     <div className={`flex flex-nowrap justify-center gap-2 ${compact ? '' : 'mb-12'}`}>
