@@ -1,17 +1,18 @@
-export default function FilterBar({ activeFilter, setActiveFilter }) {
+export default function FilterBar({ activeFilter, setActiveFilter, compact = false }) {
   const filters = ['Hepsi', 'Distilled', 'Fermented', 'Clear', 'Aged', 'Anise'];
 
   return (
-    <div className="flex flex-wrap justify-center gap-3 mb-12">
+    <div className={`flex flex-nowrap justify-center gap-2 ${compact ? '' : 'mb-12'}`}>
       {filters.map((filter) => (
         <button
           key={filter}
           onClick={() => setActiveFilter(filter)}
-          className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${
-            activeFilter === filter
-              ? 'bg-amberAccent text-darkBg border-amberAccent shadow-[0_0_15px_rgb(200,134,10,0.4)]'
+          className={`rounded-full font-medium transition-all duration-300 border whitespace-nowrap
+            ${compact ? 'px-4 py-1.5 text-xs' : 'px-5 py-2 text-sm'}
+            ${activeFilter === filter
+              ? 'bg-amberAccent text-darkBg border-amberAccent shadow-[0_0_12px_rgb(200,134,10,0.4)]'
               : 'bg-transparent text-textMuted border-[#3a2c1e] hover:border-amberAccent hover:text-textMain'
-          }`}
+            }`}
         >
           {filter}
         </button>
