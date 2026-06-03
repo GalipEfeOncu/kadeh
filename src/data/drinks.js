@@ -1,10 +1,10 @@
 export const drinks = [
   {
-    id: 'raki',
-    name: 'Rakı',
+    id: 'yeni-raki',
+    name: 'Yeni Rakı',
     emoji: '🥃',
     color: '#ffffff',
-    aliases: ['Aslan Sütü', 'Lion\'s Milk'],
+    aliases: ['Aslan Sütü', 'Tekel Rakısı', 'Lion\'s Milk'],
     origin: 'Türkiye',
     ana_tur: 'rakı',
     alt_tur: 'klasik',
@@ -12,7 +12,7 @@ export const drinks = [
     olgunlasma: 'dinlendirilmemiş',
     aroma: ['anasonlu'],
     alkol_seviye: 'sert',
-    lore_short: 'Aslan sütü. Anasonlu ve okkalı; suyu görünce bembeyaz bulutlanır. En iyi eşlikçisi mezeler, usulca akan sohbetler ve hafif bir deniz manzarasıdır. Türkiye\'nin milli içkisi, bir ritüelin adıdır.',
+    lore_short: 'TEKEL\'in mirası, cumhuriyetin rakısı. Aslan sütü denen efsane bu şişede başladı. Onyıllarca tek marka, tek rakı olan Yeni Rakı, meyhane kültürünün ortak dilidir. Su eklenince bulutlanan o beyaz, Türkiye\'nin kendisidir.',
     lore_full: [
       {
         baslik: 'Köken',
@@ -84,6 +84,334 @@ export const drinks = [
     rekorlar: 'Türkiye\'de en çok tüketilen yüksek alkollü içki.',
     yanlis_bilinenler: 'Rakıya önce buz atılmaz, önce su sonra buz konur. Aksi halde rakı kristallenir ve tadı bozulur.',
     sozler: '"Suçluya rakı içirirsen sırrını, masuma içirirsen derdini söyler."'
+  },
+  {
+    id: 'efe-raki',
+    name: 'Efe Rakı',
+    emoji: '🥃',
+    color: '#d4e8f0',
+    aliases: ['Efe'],
+    origin: 'Türkiye',
+    ana_tur: 'rakı',
+    alt_tur: 'klasik',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['anasonlu', 'çiçeksi'],
+    alkol_seviye: 'sert',
+    lore_short: 'Ege\'nin kendi rakısı. Bornova Misketi üzümü ve Bornova anasonu bir araya gelince ortaya çıkan şey, bir içki değil bir atmosferdir. Deniz kokusu, limon kokusu ve uzun bir kıyı akşamı.',
+    lore_full: [
+      {
+        baslik: 'Köken',
+        metin: `"Efe" kelimesi, Ege kültüründe kahramanlık ve yiğitlik demektir. Osmanlı döneminde Ege dağlarında haksızlığa karşı duran Zeybek savaşçılarına "efe" denirdi. Bu ismi taşıyan bir rakı markası, başından beri bir kişilik iddiasıyla yola çıkmıştır: Ege'nin gururu, özgürlüğü ve toprağıyla barışık ruhu.\n\nMarka, 1980'lerin sonunda Türkiye'de rakı üretiminin TEKEL tekelinden özel sektöre açılmasıyla birlikte filizlendi. İzmir ve Ege'nin bereketli bağlarından gelen üzümler, Bornova'nın asırlık anason geleneğiyle buluşunca ortaya yalnızca Ege'ye özgü bir profil çıktı. Bornova Misketi üzümü ve Bornova anasonu, Efe'nin imzasıdır; bu iki hammadde aynı coğrafyanın toprak ve havasını şişeye taşır.\n\nİlk yıllarında Ege'nin küçük meyhanelerine giren Efe Rakı, kısa sürede bu toprakların kendi içkisi olarak benimsendi. "Bu rakı bu iklimden" diyen içenler için Efe, coğrafyanın kendisini içmek demekti. Rakı söz konusu olduğunda hammaddenin coğrafyası, karakterin coğrafyasına dönüşür.`
+      },
+      {
+        baslik: 'Yayılma',
+        metin: `Efe Rakı, Ege pazarında güçlü bir yer edindikten sonra Türkiye geneline yayıldı. İzmir ihracat altyapısının avantajını kullanan marka, erken dönemde Yunanistan, Avrupa ve Kuzey Amerika'daki Türk diasporasına ulaştı. Bu erken uluslararası varlık, Efe'ye hem pazar tecrübesi hem de Türk rakısının kalite elçisi olma rolü kazandırdı.\n\nTürkiye'de büyük restoran zincirlerinin menülerine girme sürecinde Efe, tutarlı kalitesiyle öne çıktı. Özellikle deniz lokantaları ve balık restoranlarıyla kurduğu bağ, marka kimliğini derinleştirdi. "Her şişesi bir öncekiyle aynı" garantisi, meyhane işletmecileri için değerliydi.\n\nGünümüzde Mey-Diageo bünyesinde üretilen Efe, Yeni Rakı'nın ardından Türkiye'nin ikinci en büyük rakı markası konumundadır. Yıllar içinde Efe Yaş Üzüm ve Efe Gold serisi gibi çeşitlemeler, markanın premium segmentte de rekabet edebildiğini kanıtlamaktadır.`
+      },
+      {
+        baslik: 'Kültürel Etki',
+        metin: `Efe'nin Ege ile özdeşleşmesi bir pazarlama kararından ibaret değildir; toprak ile içki arasındaki gerçek bir bağın yansımasıdır. İzmir'in sahil şeridindeki balık restoranları, Bodrum'un gece meyhaneleri, Çeşme'nin denize karşı sofraları... Efe bu ortamlarda sadece bir seçenek değil, mekânın parçasıdır.\n\nGarson "ne içeceksiniz?" demeden önce masaya gelen su bardakları ve yanlarında beliren Efe şişeleri, Ege kıyısının yazılı olmayan bir ritüelidir. Deniz rüzgarı, taze levrek ve soğuk Efe, bu üçlü Ege yazının kendiliğinden menüsüdür.\n\nEfe isminin taşıdığı kültürel anlam, yiğit, özgür, toprağıyla barışık adam imgesi, markanın sesine de işlemiştir. Rakı içmek nasıl bir ritüelse, o ritüelin Ege versiyonu Efe'yle şekillenmiştir. "Yeni Rakı mı içersin, Efe mi?" sorusu, Türkiye'de sadece bir içki tercihi değil; iki farklı kıyı arasında seçim yapmaktır.`
+      },
+      {
+        baslik: 'Modern Dönem',
+        metin: `Uluslararası içki yarışmalarında aldığı ödüller Efe'yi ihracat vitrinine taşıdı. Türk rakısını dünyanın dört bir yanındaki içki meraklılarına tanıtan markalar arasında Efe önemli bir yer tutuyor. Bu sayede "Türkiye'ye gittiğimde rakı içtim" anısını taşıyan Avrupalı turistlerin bir kısmı, ülkelerine döndüklerinde aynı şişeyi arayabiliyor.\n\nEfe Gold serisi, göbek rakısı tekniğiyle daha premium bir deneyim sunarken Yaş Üzüm versiyonu taze üzüm damıtmasının canlı karakterini taşır. Bu çeşitlilik, Efe'yi hem klasik rakı arayanlar hem de meraklı içiciler için geçerli bir adres yapmaktadır.\n\nCraft rakı hareketinin büyüdüğü bu dönemde Efe, köklü marka güvenilirliği ile artizanal değerleri dengeleme konusunda diğer büyük markalara kıyasla daha başarılı bir pozisyon tutturmuştur. Bornova anasonu ve Misketi bağı vurgusu, bu dönemin terroir söylemiyle örtüşmektedir.`
+      },
+      {
+        baslik: `Türkiye ile İlişkisi`,
+        metin: `Türkiye'de rakı tartışmaları çoğunlukla "Yeni Rakı mı, Efe mi?" sorusuyla başlar. Bu ayrım salt tercih meselesi değildir; iki farklı kimliğin yansımasıdır. Yeni Rakı İstanbul meyhane geleneğini ve TEKEL mirasını temsil ederken, Efe Rakı Ege sahilini, denizi ve açık havayı temsil eder.\n\nEge asıllı biri için Efe, memleket içkisidir. Sofrada ailenin yaşlısı Efe'yi tercih ediyorsa, gencin de aynı şişeye uzanması neredeyse bir miras devridir. Rakı bu topraklarda nesiller arasında bir bağdır; hangi markayı seçtiğin ise kökünün nereye dayandığını anlatır.\n\nVe belki de en çarpıcı olan şudur: Türkiye'de rakı, kimin içtiğiyle değil nerede içildiğiyle anlam kazanır. Efe, deniz kıyısında, yıldızların altında, uzun bir yaz gecesinde içilir. Bu coğrafi anlatı, markanın en güçlü silahıdır.`
+      }
+    ],
+    hammadde: 'Üzüm (Ege bölgesi, Bornova Misketi ağırlıklı) ve Bornova Anasonu',
+    uretim_sureci: 'Ege üzümlerinden elde edilen suma, Bornova anasonuyla bakır imbiklerde yeniden damıtılır.',
+    dinlendirme: 'Çelik tanklarda 1-3 ay dinlendirilir.',
+    renk: 'Sek iken şeffaf, su eklendiğinde bulutlu beyaz.',
+    koku: 'Temiz anason, hafif çiçeksi ve taze üzüm notaları.',
+    tat: 'Yeni Rakı\'ya kıyasla daha yumuşak ve hafif. Anason varlığı belirgin ama keskin değil.',
+    finish: 'Orta uzunlukta, temiz ve ferahlatıcı.',
+    vucut: 'Medium body',
+    rakon: 'mix',
+    sek_detay: {
+      kadeh: 'Yok (Rakı sek içilmez)',
+      sicaklik: '',
+      miktar: '',
+      hazirlik: ''
+    },
+    mix_detay: [
+      {
+        isim: 'Klasik Rakı Su',
+        malzemeler: ['1 ölçü Efe Rakı', '1 ölçü Su', 'İsteğe bağlı 1-2 küp buz'],
+        hazirlanis: 'Ehlikeyf bardağına önce rakı, sonra yavaşça su, en son buz eklenir.',
+        neden: 'Su anason yağlarını çözerek aromayı açar ve Ege karakterini ön plana çıkarır.',
+        ortam: 'Kıyı meyhanesi, balık sofrası, yaz akşamı.'
+      }
+    ],
+    yiyecek: 'Taze deniz ürünleri, levrek, çipura, ege meze tabağı, beyaz peynir, kavun.',
+    muzik_his: 'Rembetiko, Türkü, Bodrum\'un gece sesi, deniz dalgaları.',
+    mevsim: 'Yaz (özellikle kıyı)',
+    abv_range: '40 - 45',
+    standart_porsiyon: '40',
+    kafa_dozu: {
+      hafif: '1-2 duble',
+      ideal: '3-4 duble',
+      limit_ustu: '5+ duble',
+      ertesi_gun: 3
+    },
+    etki_hizi: 'Orta (20-30 dk)',
+    metabolizma: 'Yavaş, anason etkisi ertesi güne sarkar.',
+    baslangic_onerileri: ['Efe Klasik'],
+    orta_seviye: ['Efe Gold'],
+    premium: ['Efe Yaş Üzüm'],
+    fiyat_araligi: '900 - 1500',
+    nereden_alinir: 'Tekel bayiler, büyük marketler, özellikle Ege bölgesinde her yerde.',
+    pop_kultur: 'Ege kıyı şeridi estetiğinin ve Türk yaz tatili kültürünün simgesi.',
+    yanlis_bilinenler: 'Ege\'de üretildiği için daha "hafif" sanılır; alkol oranı standart rakıyla aynıdır.',
+    sozler: '"Efe içilmez, yaşanır."'
+  },
+  {
+    id: 'altinbas',
+    name: 'Altınbaş Rakı',
+    emoji: '🥃',
+    color: '#f5c842',
+    aliases: ['Altınbaş'],
+    origin: 'Türkiye',
+    ana_tur: 'rakı',
+    alt_tur: 'klasik',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['anasonlu'],
+    alkol_seviye: 'sert',
+    lore_short: 'Demokratik rakı. Gösteriş yapmadan, iddia etmeden, sadece var olarak. Her mevsim sofrada, her bütçeye uygun, her muhabbete eşlik eden; Türkiye\'nin belki de en dürüst içkisi.',
+    lore_full: [
+      {
+        baslik: 'Köken',
+        metin: `"Altınbaş" Türkçede altın gibi üstün, başı dik anlamını taşır. Marka bu iddiayı en çetrefilli yere taşıdı: Fiyatını düşük tutarak kalitesini korumak. Bu, içki dünyasında nadiren başarılan bir denge.\n\nRakı üretiminin özelleşmesinin ardından Türkiye'de market raflarında yerini alan Altınbaş, özellikle fiyat duyarlı ama kalite arayan tüketicilere hitap etmek üzere konumlandı. "İyi rakı pahalı olmalı" önyargısını yıkan bu tutum, markanın geniş kitlelere yayılmasını sağladı.\n\nÜretim sürecinde klasik rakı prosedürleri eksiksiz uygulanır. Kaliteli üzüm sumasının anasonla buluşması, damıtılması, dinlendirilmesi. Altınbaş bu süreci kısa kesmez; daha büyük ölçekte çalışarak maliyet avantajını tüketiciye yansıtır.`
+      },
+      {
+        baslik: 'Yayılma',
+        metin: `Altınbaş, büyük şehirlerin market raflarından küçük beldelerin bakkalarına kadar her yerde bulunur. Bu yaygınlık tesadüf değildir; Türkiye'nin dağıtım ağını etkin kullanan rakı markalarından biri olmak için bilinçli bir strateji izlenmiştir.\n\nMarka, ilk on yılında kendine özgü bir sadakat kitlesi oluşturdu. Bu sadakatin arkasında yalnızca fiyat değil, tutarlılık yatar. Her şişede aynı profili bulmak, özellikle meyhane işletmecileri için büyük değer taşır. Altınbaş siparişi verirken sürprizle karşılaşmazsın.\n\nRestoran ve meyhane dünyasında Altınbaş'ın yer alması, markanın yalnızca evde değil dışarıda da geçerli bir seçim olduğunu kanıtlar. "Uygun fiyatlı ama iyi" kombinasyonu, hem bireysel tüketicinin hem de işletmecinin aradığıdır.`
+      },
+      {
+        baslik: 'Kültürel Etki',
+        metin: `Altınbaş'ın kültürel yeri, Türkiye'nin gündelik yaşamının tam ortasındadır. Öğrenci sofrasında, işçi muhabbetinde, balkon rakısında, mütevazı mezelerde ve uzayan gecelerde. Bu içki, büyük iddiası olmayan ama güçlü bir karakter taşıyan insanlar gibidir: Her zaman orada, her zaman aynı.\n\nRakı kültüründe gizli bir gerçek vardır: Pahalı şişeyi öne alan insanlar bazen Altınbaş içenlere küçümseyici bakabilir. Oysa kör tadım yarışmalarında sıklıkla görülen bir tablo şudur: Rakıyı en iyi bilen kişiler, ucuz markalara karşı pek az önyargıyla yaklaşır. Çünkü kalite, etikette değil kadehin içindedir.\n\nAltınbaş içmek bazen bilinçli bir tutum bildirisidir: "Ben rakı içmek istiyorum, gösteriş yapmıyorum." Bu duruş, Türk kültüründeki sadeliği seven damarla örtüşür. Şaşalı olmadan lezzetli, pahalı olmadan kaliteli.`
+      },
+      {
+        baslik: 'Modern Dönem',
+        metin: `Altınbaş günümüzde konumunu korumaktadır. Marka, büyük pazarlama bütçelerinden ziyade erişilebilirlik ve tutarlılık üzerine kurulu bir strateji izlemektedir.\n\nSon yıllarda bazı tadım topluluklarında Altınbaş "sürpriz kaliteli" olarak değerlendirilmektedir. Özellikle kör tadım düzenlemelerinde bu marka, pahalı rakılarla aynı masada tutunabilmekte ve zaman zaman katılımcıları şaşırtmaktadır.\n\nCraft rakı trendinin giderek büyüdüğü günümüzde Altınbaş, rakı dünyasının arka planında sessizce varlığını sürdürmektedir. Büyük iddia yok, büyük paket yok; sadece her akşam masada hazır, güvenilir bir rakı.`
+      },
+      {
+        baslik: `Türkiye ile İlişkisi`,
+        metin: `Türkiye'de en çok rakı içen insan, her akşam premium şişe açan biri değildir. O insan, belki haftada bir oturan, meyhanede ya da balkonda iki duble içen, ama her kadehten aynı keyfi alan biridir. Altınbaş, işte o insanın kadehindeki rakıdır. Ve bu, küçük bir şey değildir.\n\nRakının Türk kültüründeki anlamı, içilen miktarla ya da markayla değil, etrafındaki insanlarla ve yaşanan anla ölçülür. Altınbaş bu anlayışın içkisidir. Sofrada kim var, ne konuşuluyor, hangi mevsim, hangi şehir, bunlar önemlidir. Şişenin fiyatı değil.\n\nVe son bir not: Bazı insanlar Altınbaş'la içki içmeyi öğrenmiştir. İlk rakı sofrasında, ilk muhabbette, ilk "hadi bir tane daha" anında bu şişe masadaydı. Bu şişeler unutulmaz. Çünkü başlangıçlar, içkiyle değil anıyla hatırlanır.`
+      }
+    ],
+    hammadde: 'Üzüm suması ve Anason',
+    uretim_sureci: 'Klasik rakı damıtma prosedürü; suma ve anasonun bakır imbiklerde yeniden damıtılması.',
+    dinlendirme: 'Çelik tanklarda kısa dinlendirme.',
+    renk: 'Sek iken şeffaf, su eklendiğinde beyaz bulut.',
+    koku: 'Belirgin anason, temiz ve sade.',
+    tat: 'Klasik rakı profili, anason öne çıkar, biraz sert bir karakter.',
+    finish: 'Kısa ila orta uzunlukta, temiz.',
+    vucut: 'Medium body',
+    rakon: 'mix',
+    sek_detay: {
+      kadeh: 'Yok (Rakı sek içilmez)',
+      sicaklik: '',
+      miktar: '',
+      hazirlik: ''
+    },
+    mix_detay: [
+      {
+        isim: 'Klasik Rakı Su',
+        malzemeler: ['1 ölçü Altınbaş Rakı', '1 ölçü Su', 'İsteğe bağlı buz'],
+        hazirlanis: 'Ehlikeyf bardağına önce rakı, sonra su, en son buz eklenir.',
+        neden: 'Anasonu ortaya çıkarır, içimi yumuşatır.',
+        ortam: 'Günlük muhabbet sofrası, balkon, hafta sonu.'
+      }
+    ],
+    yiyecek: 'Beyaz peynir, zeytin, kavun, ızgara köfte, mevsim meze.',
+    muzik_his: 'Türk pop, arabesk, samimi sohbetler, mahallenin sesi.',
+    mevsim: 'Her mevsim',
+    abv_range: '40 - 45',
+    standart_porsiyon: '40',
+    kafa_dozu: {
+      hafif: '1-2 duble',
+      ideal: '3-4 duble',
+      limit_ustu: '5+ duble',
+      ertesi_gun: 3
+    },
+    etki_hizi: 'Orta (20-30 dk)',
+    metabolizma: 'Yavaş, anason etkisi ertesi güne sarkar.',
+    baslangic_onerileri: ['Altınbaş Klasik'],
+    orta_seviye: ['Altınbaş Klasik'],
+    premium: [],
+    fiyat_araligi: '650 - 950',
+    nereden_alinir: 'Tekel bayiler, market, bakkal. Her yerde.',
+    pop_kultur: 'Türkiye\'nin sıradan, samimi ve güvenilir günlük rakısı.',
+    yanlis_bilinenler: 'Ucuz olduğu için kalitesiz sanılır; kör tadımlarda pek çok pahalı rakıyla başa başa gider.',
+    sozler: '"En iyi rakı, etrafındaki insanların güldüğü sofradaki rakıdır."'
+  },
+  {
+    id: 'tekirdag-gold',
+    name: 'Tekirdağ Gold Seri',
+    emoji: '🥃',
+    color: '#d4aa40',
+    aliases: ['Tekirdağ', 'Gold Seri'],
+    origin: 'Türkiye',
+    ana_tur: 'rakı',
+    alt_tur: 'göbek',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['anasonlu', 'baharatlı'],
+    alkol_seviye: 'sert',
+    lore_short: 'Trakya\'nın toprağından gelen pürüzsüz rakı. Göbek damıtmasının özüdür: Damıtmanın en temiz, en saf orta kısmi. Her yudumda bir iyileştirme, bir arınma hissi vardır. Premium meyhane masasının tercihi.',
+    lore_full: [
+      {
+        baslik: 'Köken',
+        metin: `Tekirdağ, Trakya'nın Marmara kıyısında, İstanbul'a yakın sakin görünen bir şehirdir. Ama sakinliği aldatıcıdır; bu topraklar Türkiye'nin en köklü rakı üretim coğrafyalarından biridir. Trakya'nın kilseli toprağı, denizden gelen rüzgarlar ve bölgenin kendine özgü mikroiklimi, burada yetişen üzümlere farklı bir karakter kazandırır.\n\nTekirdağ Rakısı, TEKEL döneminden bu yana Trakya'nın üzüm sumasıyla üretilir. Markanın Gold Serisi bir adım öteye geçer: Göbek damıtması tekniği uygulanır. Bu teknikte damıtma sürecinin yalnızca orta kesimi, yani "göbek" kısmı kullanılır. Baş ve kuyruk adı verilen daha sert ve iri moleküllü kısımlar dışarıda bırakılır. Geriye sadece en saf, en zarif kısım kalır.\n\n"Göbek" kelimesinin tam karşılığı navel'dir ama metafor olarak merkez, öz, kalp anlamına gelir. Tekirdağ Gold'da içkinin kalbi şişelenir. Bu yüzden daha az sert, daha yumuşak, daha uzun bitiş.`
+      },
+      {
+        baslik: 'Yayılma',
+        metin: `Tekirdağ markası, rakı sektörünün özelleşmesinin ardından Trakya kimliğini taşıyan bir marka olarak güçlü bir pozisyon kurdu. Gold Serisi ise premium segment stratejisinin önemli bir parçasıdır; fiyat itibariyle "iyi rakı içiyorum" demek isteyenlerin bütçesiyle buluşurken, karakteriyle de bu iddiayı karşılayan bir içki sunar.\n\nÖzellikle İstanbul restoranlarında ve üst segment meyhanelerde Tekirdağ Gold'un varlığı belirgindir. "Müşteri masaya oturur, Tekirdağ Gold ister" sahnesinin bir tür meyhane standardı haline gelmesi, markanın bu alanda ne kadar köklü bir yer edindiğini göstermektedir.\n\nYurt dışında da Türk mutfak kültürüyle birlikte Tekirdağ Gold talep görmektedir. Marka, ihracat pazarlarında özellikle rakıyı daha iyi tanımak isteyen içicilere kapı açmaktadır.`
+      },
+      {
+        baslik: 'Kültürel Etki',
+        metin: `Türkiye'de "göbek rakısı nedir?" sorusu genellikle Tekirdağ Gold örneğiyle cevaplanır. Bu durum, markanın eğitici bir işlev de gördüğünü ortaya koyar. İnsanlar bu içkiyi içerek aynı zamanda rakı kategorisini öğrenir. Sadece içmek için değil, anlamak için de seçilen bir marka.\n\nTekirdağ Gold sofrada bir saygı jestine de dönüşmüştür. Davet ettiğiniz misafirler için masada Gold Seri olması, onlara verilen değerin görünür bir ifadesidir. "Özel misafir, özel rakı" mantığı bu markayla somutlaşmaktadır.\n\nRakı tadım etkinliklerinde ve rakı kupası gibi organizasyonlarda Tekirdağ Gold sıklıkla referans örnek olarak kullanılmaktadır. "Göbek rakısının nasıl içildiğini öğrenmek isteyenler buradan başlasın" tavsiyesi uzmanlardan sıklıkla duyulur.`
+      },
+      {
+        baslik: 'Modern Dönem',
+        metin: `Gold Serisi bugün çeşitli boy seçenekleriyle sunulmaktadır. Restoran paketlerinden özel kutulara kadar farklı ambalaj seçenekleri, markanın hem bireysel tüketiciye hem kurumsal alıcıya hitap ettiğini göstermektedir.\n\nRakı kültürünün rafine bir boyut kazandığı son yıllarda Tekirdağ Gold'a olan ilgi artmaktadır. Craft rakı hareketi insanlara "farklı rakılar var" fikrini aşılarken, Tekirdağ Gold köklü bir marka güvenilirliğiyle bu merakı karşılayan adreslerden biri olmaya devam etmektedir.\n\nTrakya coğrafyasına verilen önem, yakın dönemin terroir odaklı içki kültürüyle de örtüşmektedir. "Nereden geliyor, nasıl üretiliyor?" sorularını soran içiciler için Trakya bağları ve Tekirdağ'ın üretim mirası somut bir cevap sunmaktadır.`
+      },
+      {
+        baslik: `Türkiye ile İlişkisi`,
+        metin: `Tekirdağ Gold'un Türkiye'deki anlamı, hem bir kalite güvencesi hem de bir sofra estetiğidir. İnsanlar bu şişeyi yalnızca içmek için açmaz; bir ritüel kurar. Doğru kadeh, doğru ölçü su, doğru meze dizilimi.\n\nTrakya üzümünün Bornova anasonuyla buluştuğu bu denklem, Türkiye'nin farklı coğrafyalarının bir içkide bütünleşmesidir. Tekirdağ Gold bir anlamda coğrafi köprüdür: Doğu Trakya'nın bağı, Ege'nin anasonu, Anadolu'nun damıtma geleneği bir kadehin içinde.\n\nVe bu önemlidir: İyi bir rakı içtiğinde, içtiğin şey sadece alkol değildir. Bir toprağın karakterini, bir suyun tadını, bir ustalığın birikimini içersin. Tekirdağ Gold bu anlamı taşıyan rakılardan biridir.`
+      }
+    ],
+    hammadde: 'Trakya üzümü suması ve Anason',
+    uretim_sureci: `Göbek damıtması: Damıtma sürecinin yalnızca orta kesimi ayrılır. Bu "göbek" suma, anasonla yeniden damıtılır.`,
+    dinlendirme: 'Çelik tanklarda dinlendirilir.',
+    renk: 'Sek iken şeffaf, su eklendiğinde beyaz.',
+    koku: 'Daha yumuşak anason, temiz, hafif meyveli arka planda.',
+    tat: 'Klasik rakıya göre belirgin biçimde daha pürüzsüz. Anason var ama sertlik yerini zarifliğe bırakmış.',
+    finish: 'Uzun ve temiz, hafif baharatlı bitiş.',
+    vucut: 'Full body',
+    rakon: 'mix',
+    sek_detay: {
+      kadeh: 'Yok (Rakı sek içilmez)',
+      sicaklik: '',
+      miktar: '',
+      hazirlik: ''
+    },
+    mix_detay: [
+      {
+        isim: 'Klasik Rakı Su',
+        malzemeler: ['1 ölçü Tekirdağ Gold', '1 ölçü Su', 'Buz (isteğe bağlı)'],
+        hazirlanis: 'Ehlikeyf bardağına önce rakı, sonra su, en son buz. Asla buz önce gelmez.',
+        neden: `Göbek rakısının zarif yapısı suyla açılır; anason ve hafif meyveli notlar daha belirginleşir.`,
+        ortam: 'Premium meyhane, özel akşam yemeği, özel misafir.'
+      }
+    ],
+    yiyecek: 'Lakerda, füme balık, güveç, ızgara kuzu, Trakya peynirleri.',
+    muzik_his: 'Fasıl, Trakya türküleri, loş ışık ve derin muhabbet.',
+    mevsim: 'Sonbahar ve kış (ama her zaman)',
+    abv_range: '45 - 50',
+    standart_porsiyon: '40',
+    kafa_dozu: {
+      hafif: '1-2 duble',
+      ideal: '3 duble',
+      limit_ustu: '4+ duble',
+      ertesi_gun: 3
+    },
+    etki_hizi: 'Orta (20-30 dk)',
+    metabolizma: 'Yavaş, göbek rakısı sabahı daha hafif bırakır.',
+    baslangic_onerileri: ['Tekirdağ Klasik'],
+    orta_seviye: ['Tekirdağ Gold Seri'],
+    premium: ['Tekirdağ Altın Seri (özel üretim)'],
+    fiyat_araligi: '1100 - 1700',
+    nereden_alinir: 'Tekel bayiler, orta-üst segment restoranlar, büyük marketler.',
+    pop_kultur: 'Türkiye\'nin premium meyhane masasının referans rakısı.',
+    yanlis_bilinenler: `"Göbek" kelimesi nedeniyle bazıları bu rakının mideden geçişiyle ilgili bir özelliği olduğunu sanır; oysa göbek, damıtmanın orta kesimine verilen isimdir.`,
+    sozler: '"İyi rakı, iyi sofra; iyi sofra, iyi hayat."'
+  },
+  {
+    id: 'kulup-raki',
+    name: 'Kulüp Rakı',
+    emoji: '🥃',
+    color: '#8b3a3a',
+    aliases: ['Kulüp'],
+    origin: 'Türkiye',
+    ana_tur: 'rakı',
+    alt_tur: 'göbek',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['anasonlu', 'yoğun'],
+    alkol_seviye: 'sert',
+    lore_short: 'Meyhane standardı. Uzun gecelerin, bitmek bilmeyen sohbetlerin ve büyük mezelerin rakısı. Göbek sumasının pürüzsüz karakteriyle içildikçe yorulmayan, masanın tam ortasına ait bir içki.',
+    lore_full: [
+      {
+        baslik: 'Köken',
+        metin: `"Kulüp" kelimesi Türkçeye Fransızcadan geçmiştir ve hem seçkin bir derneği hem de ortak bir kültürü paylaşan topluluğu ifade eder. Kulüp Rakı bu ismi tesadüfen taşımaz: Rakı etrafında kurulan sofra topluluğunun, meyhane erkânının, hasbihal eden insanlar grubunun içkisidir.\n\nMarka, göbek rakısı kategorisinde üretilir. Göbek, rakı damıtmacılığında özel bir terimdir: Damıtma sürecinin birinci geçişinde elde edilen toplam alkolün yalnızca orta kesimi, yani ne çok sert ne çok zayıf olan kısmı ayrıca işlenir. Bu "göbek" kısım daha saf ve temiz bir yapıya sahiptir. Kulüp Rakı bu göbek sumasını anasonla buluşturup yeniden damıtır.\n\nSonuç: Daha az keskin ama daha derin bir profil. Anason varlığı güçlüdür ama sertliği yerini yumuşak, köklü bir yoğunluğa bırakmıştır. Bu özellik uzun meyhane geceleri için idealdir; içildikçe yorulmayan bir rakı.`
+      },
+      {
+        baslik: 'Yayılma',
+        metin: `Kulüp Rakı, Türkiye'nin restoran ve meyhane dünyasında güçlü bir konuma sahiptir. "Ev içkisi" olmaktan çok "dışarıda içki" olarak konumlanmıştır. Bu ayrım önemlidir; meyhane ortamının ritüeli ile evin sessizliği arasındaki fark, içilen rakıya da yansır.\n\nBüyük şehirlerde neredeyse her orta ve üst segment meyhane menüsünde Kulüp Rakı yer alır. Garsonların önerdiği rakı genellikle Kulüp'tür; hem fiyat hem kalite dengesi hem de sofra performansı açısından güvenilir bir seçim. "Ne içersiniz?" sorusuna "ne önerirsiniz?" cevabı verildiğinde çoğunlukla Kulüp gelir.\n\nYıllar içinde Kulüp, meyhane işletmecilerinin tercih listesinin üst sıralarına yerleşti. Bu tercih rastgele değildir: Tutarlı üretim kalitesi, meyhane ortamında çok kritik bir güvencedir.`
+      },
+      {
+        baslik: 'Kültürel Etki',
+        metin: `Kulüp Rakı, meyhane kültürünün içine öylesine işlemiştir ki bazı içiciler için rakı demek Kulüp demektir. "Hadi bir Kulüp açalım" cümlesi sadece bir içki siparişi değildir; o akşamın tonu için verilen bir karardır, birlikte olunacağının ilanıdır.\n\nMezelerin birbiri ardına geldiği, muhavebet eden sofralarda Kulüp Rakı'nın göbek yapısı uzun geceye dayanır. Bu, ürünün doğasından gelen bir avantajdır: Daha saf suma, daha az yabancı madde. Meyhane kültüründe "son kadehi de ilk kadar iyi içmek" hedefinin bu rakıyla daha kolay tutturulduğu söylenir.\n\nKulüp Rakı'nın sofradaki varlığı bir seçim değil, beklentidir. Büyük bir İstanbul meyhanesinde, Ankara'nın kalabalık bir birahanesinde ya da İzmir'in köklü bir balık restoranında; nerede oturursanız oturun, menüde Kulüp'ü görürsünüz. Bu yaygınlık, bir markanın değil bir kurumun işaretidir.`
+      },
+      {
+        baslik: 'Modern Dönem',
+        metin: `Kulüp Rakı, günümüzde rakı sektöründe üst orta segment için referans marka konumundadır. Restoran paketlerinde ve kurumsal etkinliklerde tercih edilmesi, markanın kurumsal güvenilirliğini gözler önüne sermektedir.\n\nSon yıllarda rakı tadım kültürü büyüdükçe Kulüp Rakı, "göbek nedir, öğrenmek istiyorum" diyen meraklıların ilk adımlarından biri haline gelmektedir. Tekirdağ Gold ile birlikte bu iki marka, göbek rakısı kategorisinin iki öncü yüzüdür.\n\nRestoran açısından Kulüp, güvenli limandır. Müşteri memnuniyeti yüksektir, şikayet nadirdir, tekrar talep kuvvetlidir. Meyhane ve restoran işletmecilerinin menüde mutlaka tuttuğu markalardan biridir; stok yönetiminde Kulüp her zaman önceliklidir.`
+      },
+      {
+        baslik: `Türkiye ile İlişkisi`,
+        metin: `Türkiye'de Kulüp Rakı içmek, bir anlayışın ifadesidir. Ne en ucuzunu ne de en pahalısını isteyen, orta yolu bilen, meyhaneyi bilen, mezeyi bilen, muhabbeti bilen insanın rakısı.\n\nBu marka, Türkiye'nin meyhane kültürünü birkaç nesil boyunca sürdüren bir işlev gördü. Aynı meyhanede aynı bardakla içilen rakı, yıllar içinde aynı dostluk bağını pekiştirdi. "Biz hep Kulüp içeriz" cümlesi bazen bir grup kimliğinin parçasıdır; hangi rakı içildiği, kimin masasında oturulduğunu da anlatır.\n\nVe belki en güzel tanım şudur: Kulüp Rakı, "iyi akşamlar" için seçilen rakıdır. Günlük yorgunluğu atmak için değil, tadını çıkarmak için oturulan gecelerin. Meze diziliminde düşünce var, müzik seçiminde özen var; kadehteki Kulüp ise tüm bunların tamamlayıcısıdır.`
+      }
+    ],
+    hammadde: 'Üzüm suması (göbek kesimi) ve Anason',
+    uretim_sureci: `Göbek damıtması uygulanır. Damıtmanın orta kesimi olan göbek suması, anasonla yeniden damıtılarak rafine bir profil elde edilir.`,
+    dinlendirme: 'Çelik tanklarda dinlendirilir.',
+    renk: 'Sek iken şeffaf, su eklendiğinde beyaz ve yoğun.',
+    koku: 'Güçlü ve köklü anason, hafif tatlımsı arka plan.',
+    tat: 'Yoğun ve derin. Anason belirgin ama zarif. Göbek karakteri sertliği yumuşatır.',
+    finish: 'Uzun, ısıtıcı ve anasonlu bitiş. Uzun meyhane gecelerinde dost.',
+    vucut: 'Full body',
+    rakon: 'mix',
+    sek_detay: {
+      kadeh: 'Yok (Rakı sek içilmez)',
+      sicaklik: '',
+      miktar: '',
+      hazirlik: ''
+    },
+    mix_detay: [
+      {
+        isim: 'Klasik Rakı Su',
+        malzemeler: ['1 ölçü Kulüp Rakı', '1 ölçü Su', 'Buz'],
+        hazirlanis: 'Ehlikeyf bardağına önce rakı, sonra su, en son buz. Klasik sıra korunur.',
+        neden: 'Göbek rakısının yoğun aroması suyla daha da açılır ve uzayan gece boyunca keyfi sürer.',
+        ortam: 'Meyhane akşamı, büyük meze sofrası, uzun muhabbet.'
+      }
+    ],
+    yiyecek: 'Her türlü meze, lakerda, karides güveç, ızgara balık, beyaz peynir, patlıcan salatası.',
+    muzik_his: 'Fasıl, canlı müzik, meyhane gürültüsü, bitmek bilmeyen sohbet.',
+    mevsim: 'Her mevsim, özellikle meyhane akşamları',
+    abv_range: '45 - 50',
+    standart_porsiyon: '40',
+    kafa_dozu: {
+      hafif: '1-2 duble',
+      ideal: '3-4 duble',
+      limit_ustu: '5+ duble',
+      ertesi_gun: 3
+    },
+    etki_hizi: 'Orta (20-30 dk)',
+    metabolizma: 'Yavaş, göbek yapısı ertesi sabahı biraz daha yumuşatır.',
+    baslangic_onerileri: ['Kulüp Rakı'],
+    orta_seviye: ['Kulüp Rakı'],
+    premium: ['Kulüp Rakı (büyük boy, sofra şişesi)'],
+    fiyat_araligi: '1000 - 1600',
+    nereden_alinir: `Restoranlar, meyhaneler, tekel bayiler. Türkiye'nin her büyük şehrinde bulunur.`,
+    pop_kultur: `Türkiye'nin meyhane kültürünün simgesi. "Bir Kulüp açalım" cümlesi bir içki siparişinin ötesinde anlam taşır.`,
+    yanlis_bilinenler: `"Göbek" rakısının daha sarhoş ettiği sanılır; oysa göbek saf suma kullandığından vücuda daha az yabancı madde girer ve bazı içiciler ertesi günü daha hafif hisseder.`,
+    sozler: '"Meyhane, rakı ve muhabbet. Geri kalan her şey teferruattır."'
   },
   {
     id: 'viski',
