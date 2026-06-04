@@ -14,6 +14,20 @@ export const kategoriler = [
     ],
   },
   {
+    id: 'şarap',
+    name: 'Türk Şarabı',
+    emoji: '🍷',
+    aciklama: `Anadolu, dünyanın en eski bağ arazilerinden birinin üzerinde duruyor. Boğazkere'nin gücü, Kalecik Karası'nın zerafeti, Emir'in tazeliği; bu topraklar çok şey söylüyor.`,
+    renk: '#8b1a1a',
+    alt_turler: [
+      { id: 'kırmızı_yerli', label: 'Kırmızı Yerli' },
+      { id: 'beyaz_yerli', label: 'Beyaz Yerli' },
+      { id: 'uluslararası', label: 'Uluslararası' },
+      { id: 'köpüklü', label: 'Köpüklü' },
+      { id: 'roze', label: 'Roze' },
+    ],
+  },
+  {
     id: 'viski',
     name: 'Viski',
     emoji: '🥃',
