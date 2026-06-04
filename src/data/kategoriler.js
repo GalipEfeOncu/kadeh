@@ -42,6 +42,18 @@ export const kategoriler = [
     ],
   },
   {
+    id: 'gin',
+    name: 'Gin',
+    emoji: '🍸',
+    aciklama: `Ardıç meyvesinin omurgasıyla ayakta duran, botaniklerle renk alan bir dünya. London Dry'dan craft Türk ginine uzanan yolculuk, her kadehin farklı bir bahçeye kapı açtığını gösterir.`,
+    renk: '#2d6a3f',
+    alt_turler: [
+      { id: 'london_dry', label: 'London Dry' },
+      { id: 'contemporary', label: 'Contemporary' },
+      { id: 'yerli_craft', label: 'Yerli Craft' },
+    ],
+  },
+  {
     id: 'votka',
     name: 'Votka',
     emoji: '🧊',
