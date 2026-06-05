@@ -1,0 +1,87 @@
+const fs = require('fs');
+
+const extraGin = `  {
+    id: 'bozikko',
+    name: 'Bozikko',
+    emoji: '🍸',
+    color: '#e6ffec',
+    aliases: ['Bozcada Gini'],
+    origin: 'Türkiye',
+    ana_tur: 'gin',
+    alt_tur: 'yerli_craft',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['botanik', 'ege otları', 'ardıç'],
+    alkol_seviye: 'orta',
+    lore_short: 'Ege rüzgarlarının kadehteki hali. Bozcaada\\'nın yerel botanikleriyle harmanlanan, Türk craft cin hareketinin küçük ama çok karakterli temsilcilerinden.',
+    lore_full: [
+      { baslik: 'Köken', metin: 'Bozcaada\\'da yerel otlar, kekik ve adaya özgü ardıç meyveleri kullanılarak küçük partiler (small batch) halinde üretilir.' },
+      { baslik: 'Yayılma', metin: 'Adadaki restoranlarda ve İstanbul\\'daki seçkin kokteyl barlarında lokal bir sır olarak yayılmıştır.' },
+      { baslik: 'Kültürel Etki', metin: 'Türkiye\\'de cinin sadece ithal markalardan ibaret olmadığını, bizim coğrafyamızın botaniklerinin cin yapımına ne kadar uygun olduğunu gösterir.' },
+      { baslik: 'Modern Dönem', metin: 'Butik üretimin artmasıyla birlikte yerli cin kategorisine olan saygıyı artırmıştır.' },
+      { baslik: 'Türkiye ile İlişkisi', metin: 'Tam bir yaz tatili içkisidir. Ege sahillerinde gün batarken içilmesi ritüeldir.' }
+    ],
+    hammadde: 'Nötr buğday alkolü, ardıç, Bozcaada kekiği ve yerel otlar.',
+    uretim_sureci: 'Küçük bakır imbikte damıtma.',
+    dinlendirme: 'Kısa süre çelik tank.',
+    renk: 'Şeffaf.',
+    koku: 'Baskın kekik, çam, ardıç ve narenciye kabuğu.',
+    tat: 'Çok tazeleyici, otsu (herbal) notalar önde, ardıç arkadan destekliyor.',
+    finish: 'Kısa, ferah ve akdeniz otları bırakıyor.',
+    vucut: 'Light body',
+    rakon: 'mix',
+    sek_detay: { kadeh: 'Copas (Balon Kadeh)', sicaklik: 'Çok Soğuk', miktar: '50 ml', hazirlik: 'Bol buzla.' },
+    mix_detay: [ { isim: 'Ege Tonik', malzemeler: ['50 ml Bozikko', '150 ml Kaliteli Tonik', 'Taze kekik dalı'], hazirlanis: 'Buz dolu kadehe cin ve tonik eklenir, taze kekik ile süslenir.', neden: 'Cindeki yerel otlar kekik dalıyla vurgulanır.', ortam: 'Bozcaada gün batımı.' } ],
+    yiyecek: 'Zeytin, beyaz peynir, kalamar tava.',
+    muzik_his: 'Akustik, Ege Pop.',
+    mevsim: 'Yaz',
+    abv_range: '40',
+    standart_porsiyon: '50',
+    kafa_dozu: { hafif: '1-2 kadeh', ideal: '3-4 kadeh', limit_ustu: '5+ kadeh', ertesi_gun: 1 },
+    etki_hizi: 'Hızlı', metabolizma: 'Hızlı', baslangic_onerileri: ['-'], orta_seviye: ['Bozikko'], premium: ['-'], fiyat_araligi: '700 - 900', nereden_alinir: 'Bozcaada, butik tekeller.', pop_kultur: 'Tatilcilerin keşfi.', yanlis_bilinenler: 'Sadece adada bulunduğu sanılır.', sozler: '"Adanın ruhu."'
+  },
+  {
+    id: 'roku',
+    name: 'Roku',
+    emoji: '🌸',
+    color: '#ffffff',
+    aliases: ['Roku Gin'],
+    origin: 'Japonya',
+    ana_tur: 'gin',
+    alt_tur: 'contemporary',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['çiçeksi', 'yeşil çay', 'yuzu'],
+    alkol_seviye: 'orta',
+    lore_short: 'Japonya\\'nın dört mevsimi bir şişede. Sakura (kiraz) çiçeği, yeşil çay, sencha, sancho biberi ve yuzu limonuyla şekillenen kusursuz bir Asya zarafeti.',
+    lore_full: [
+      { baslik: 'Köken', metin: 'Suntory firması tarafından yaratılan Roku, Japoncada "6" demektir. Bu isim, cinin içine katılan 6 özel Japon botaniğinden gelir.' },
+      { baslik: 'Yayılma', metin: 'Japon viskilerinin dünyayı kasıp kavurmasının ardından, Japon cinleri de aynı minimalist mükemmellik algısıyla çok hızlı yayıldı.' },
+      { baslik: 'Kültürel Etki', metin: 'Klasik ardıç baskın London Dry tarzından sıkılanlara "çiçeksi ve narin" yeni bir boyut açmıştır.' },
+      { baslik: 'Modern Dönem', metin: 'Altıgen şişesi (her yüzünde 6 botanikten birinin kabartması vardır) ile bar raflarının en estetik şişelerinden biridir.' },
+      { baslik: 'Türkiye ile İlişkisi', metin: 'Kaliteli kokteyl barlarında ve Asya füzyon restoranlarında popülerdir.' }
+    ],
+    hammadde: 'Geleneksel cin botanikleri (ardıç vb.) + 6 Japon botaniği (Sakura çiçeği, Sakura yaprağı, Yuzu kabuğu, Sencha çayı, Gyokuro çayı, Sansho biberi).',
+    uretim_sureci: 'Botanikleri mevsiminde (örneğin ilkbaharda Sakura, kışın Yuzu) toplanarak ayrı ayrı damıtılıp harmanlanır.',
+    dinlendirme: 'Dinlendirilmez.',
+    renk: 'Şeffaf.',
+    koku: 'Kiraz çiçeği, yeşil çay ve hafif narenciye (yuzu).',
+    tat: 'İpeksi. Geleneksel ardıç tadı var ama üzerine çok zarif çiçeksi ve tatlı çay notaları örtülmüş. Bitişe doğru hafif Sansho biberi ısısı.',
+    finish: 'Çok taze, hafif baharatlı (biber) bitiş.',
+    vucut: 'Light to Medium',
+    rakon: 'mix',
+    sek_detay: { kadeh: 'Yok', sicaklik: '', miktar: '', hazirlik: '' },
+    mix_detay: [ { isim: 'Japon G&T', malzemeler: ['50 ml Roku Gin', 'Taze Zencefil Çubukları', 'Premium Tonik'], hazirlanis: 'Buzlu bardağa cin ve tonik eklenir, uzun kesilmiş taze zencefil dilimleriyle süslenir.', neden: 'Zencefil, Roku\\'nun yuzu ve sakura notalarını en iyi dengeleyen eşleşmedir.', ortam: 'Şık bir bar, akşamüstü.' } ],
+    yiyecek: 'Sushi, hafif deniz ürünleri, edamame.',
+    muzik_his: 'Lo-Fi, Chill Asya tınıları.',
+    mevsim: 'İlkbahar',
+    abv_range: '43',
+    standart_porsiyon: '50',
+    kafa_dozu: { hafif: '1-2 kadeh', ideal: '3 kadeh', limit_ustu: '4+ kadeh', ertesi_gun: 1 },
+    etki_hizi: 'Orta', metabolizma: 'Hızlı', baslangic_onerileri: ['-'], orta_seviye: ['Roku'], premium: ['Ki No Bi (Diğer lüks Japon cini)'], fiyat_araligi: '1200 - 1600', nereden_alinir: 'İyi tekeller.', pop_kultur: 'Japon minimalizminin sıvı hali.', yanlis_bilinenler: 'Sadece Asya yemeğiyle içileceği sanılır.', sozler: '"Dört mevsimlik zarafet."'
+  }`;
+
+let content = fs.readFileSync('src/data/gin.js', 'utf-8');
+content = content.replace(/\n\];/, `,\n${extraGin}\n];`);
+fs.writeFileSync('src/data/gin.js', content);
+console.log("2 Gin added.");
