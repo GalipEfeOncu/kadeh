@@ -357,7 +357,7 @@ export const kokteyl = [
     olgunlasma: 'dinlendirilmemiş',
     aroma: ['nane', 'lime', 'beyaz rom', 'şeker'],
     alkol_seviye: 'hafif_orta',
-    lore_short: 'Dünyanın en ferah kokteyli. Taze nane, lime, esmer şeker ve beyaz romun Karayip sıcaklarına karşı en iyi savunması.',
+    lore_short: 'Dünyanın en ferah kokteyli. Taze nane, lime, beyaz şeker ve beyaz romun Karayip sıcaklarına karşı en iyi savunması.',
     lore_full: [
       {
         baslik: 'Köken',
@@ -372,7 +372,7 @@ export const kokteyl = [
         metin: 'Yazlık beldelerin, plajların ve tatil köylerinin kraliçesidir. Kötü yapıldığında dişlerinize nane parçaları yapışan tatlı bir şuruba döner; iyi yapıldığında ise şaheserdir.'
       }
     ],
-    hammadde: 'Beyaz Rom, Taze Nane, Taze Lime, Esmer Şeker (veya şurup), Soda.',
+    hammadde: 'Beyaz Rom, Taze Nane, Taze Lime, beyaz şeker (veya şurup), Soda.',
     uretim_sureci: 'Ezme (Muddle) ve Bardağın içinde yapım (Build).',
     dinlendirme: 'Dinlendirilmez.',
     renk: 'Açık yeşil, buzlu ve şeffaf.',
@@ -390,7 +390,7 @@ export const kokteyl = [
     mix_detay: [
       {
         isim: 'Klasik Mojito',
-        malzemeler: ['50 ml Beyaz Rom (örn: Bacardi)', 'Yarım Lime (4 parçaya bölünmüş)', '2 tatlı kaşığı esmer şeker', '8-10 taze nane yaprağı', 'Soda'],
+        malzemeler: ['50 ml Beyaz Rom (örn: Bacardi)', 'Yarım Lime (4 parçaya bölünmüş)', '2 tatlı kaşığı beyaz şeker', '8-10 taze nane yaprağı', 'Soda'],
         hazirlanis: 'Bardağın dibinde lime parçalarını ve şekeri tokmakla ezin (şeker erisin). Nane yapraklarını avucunuzda bir kez şaplatıp bardağa atın (çok ezip parçalamayın, acılaşır). Rom ekleyin, kırık buz doldurun, alttan üste doğru karıştırın. Üzerini sodayla tamamlayın.',
         neden: 'Mükemmel denge: Şeker ve asit dengelenir, nane ferahlık katar, rom ruhu verir, buz ve soda susuzluğu giderir.',
         ortam: 'Gündüz plaj partisi, sıcak bir yaz akşamı.'
@@ -826,6 +826,125 @@ export const kokteyl = [
     pop_kultur: 'Yaz mevsiminde sosyal medyada kadeh tokuşturma videolarının demirbaşıdır.',
     yanlis_bilinenler: 'Shakerda çalkalanacağı sanılır; asla çalkalanmaz, gazlı içecekler çalkalanırsa patlar.',
     sozler: '"Spritz time is the best time."'
+  },
+  {
+    id: 'cosmopolitan',
+    name: 'Cosmopolitan',
+    emoji: '🍸',
+    color: '#ff4081',
+    aliases: ['Cosmo'],
+    origin: 'ABD',
+    ana_tur: 'kokteyl',
+    alt_tur: 'sour',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['sitrus', 'kızılcık', 'tatlı-ekşi'],
+    alkol_seviye: 'orta',
+    lore_short: 'Votka, triple sec, kızılcık suyu ve taze misket limonu. 90\'ların şehirli ve bağımsız kadın imajının, Sex and the City ile özdeşleşmiş pembe efsanesi.',
+    lore_full: [
+      { baslik: 'Köken', metin: 'Cosmopolitan\'ın kökeni üzerinde barmenler arasında tartışmalar olsa da, modern reçetenin 1987 yılında New York\'taki Odeon barda Toby Cecchini tarafından yaratıldığı kabul edilir. Cecchini, votkayı Cointreau, taze lime ve kızılcık (cranberry) suyuyla birleştirerek kokteyle o şık, dengeli pembe rengi ve ekşi-tatlı tadı verdi.' },
+      { baslik: 'Kültürel Etki', metin: '90\'lı yıllarda "Sex and the City" dizisinde Carrie Bradshaw ve arkadaşlarının favori içkisi olmasıyla kokteyl bir dünya fenomenine dönüştü. Bağımsız, şık, modern şehirli kadın kimliğinin sıvı hali olarak barların en çok sipariş edilen içkisi oldu.' },
+      { baslik: 'Türkiye ile İlişkisi', metin: 'Türkiye\'deki kokteyl barlarında, özellikle narenciye ve tatlı-ekşi dengesini seven kadınlar ve hafif içimli şık bir alternatif arayanlar tarafından çok sık tercih edilir.' }
+    ],
+    hammadde: 'Limon aromalı votka (Citron), Triple Sec (portakal likörü), Taze Misket Limonu Suyu, Kızılcık Suyu.',
+    uretim_sureci: 'Çalkalama (Shake) yöntemi. Buzla çalkalanıp Martini kadehine süzülür.',
+    dinlendirme: 'Dinlendirilmez.',
+    renk: 'Bebek pembesi, hafif puslu ve parlak.',
+    koku: 'Misket limonu ve portakal kabuğu sitrusu ile tatlı kızılcık esintisi.',
+    tat: 'Narenciye asiditesi ve Triple Sec tatlılığı, kızılcık suyunun buruk tatlı-ekşi karakteriyle birleşir. Alkolü yumuşak ama hissedilirdir.',
+    finish: 'Orta uzunlukta, narenciyeli, tazeleyici ve hafif buruk tatlı.',
+    vucut: 'Light body',
+    rakon: 'mix',
+    sek_detay: {
+      kadeh: 'Martini kadehi veya Coupette kadehi',
+      sicaklik: 'Buz gibi (çalkalanarak soğutulmuş)',
+      miktar: '120 ml',
+      hazirlik: 'Kadeh önceden buzla soğutulur. Portakal veya misket limonu kabuğu sıkılarak servis edilir.'
+    },
+    mix_detay: [
+      {
+        isim: 'Orijinal Cosmo Reçetesi',
+        malzemeler: ['40 ml Votka Citron', '15 ml Cointreau (veya Triple Sec)', '15 ml Taze Lime Suyu', '30 ml Kızılcık Suyu'],
+        hazirlanis: 'Tüm malzemeleri buz dolu shaker\'a ekleyin. En az 15 saniye sertçe çalkalayın. Soğutulmuş kadehe çift süzerek dökün. Üzerine portakal kabuğu yağı sıkıp süsleyin.',
+        neden: 'Kızılcık suyunun çok fazla olmaması gerekir; amacı kokteyli tatlandırmak değil, sadece o ekşi narenciye yapısına hafif bir burukluk ve pembe renk vermektir.',
+        ortam: 'Şık barlar, kız kıza gece gezmeleri, akşamüstü partileri.'
+      }
+    ],
+    yiyecek: 'Hafif mezeler, keçi peynirli bruschetta, suşi ve hafif meyveli tatlılar.',
+    muzik_his: 'Modern pop, funk, nu-disco tınıları, şehrin hareketli akşam temposu.',
+    mevsim: 'Yaz ve İlkbahar',
+    abv_range: '15 - 20',
+    standart_porsiyon: '120',
+    kafa_dozu: { hafif: '1 kadeh', ideal: '2-3 kadeh', limit_ustu: '4+ kadeh', ertesi_gun: 2 },
+    etki_hizi: 'Hızlı (Şeker ve asit emilimi hızlandırır)',
+    metabolizma: 'Hızlı',
+    baslangic_onerileri: ['Cosmopolitan'],
+    orta_seviye: ['-'],
+    premium: ['Premium Cointreau ve Grey Goose L\'Orange ile yapılan Cosmo'],
+    fiyat_araligi: '350 - 550',
+    nereden_alinir: 'Tüm kokteyl barları ve şık restoranlar.',
+    pop_kultur: 'Sex and the City dizisiyle özdeşleşen içki, 90\'lar popüler kültürünün en büyük içki trendidir.',
+    yanlis_bilinenler: 'Sadece kadın içkisi olduğu önyargısı yanlıştır; son derece dengeli, asidik ve alkol yapısı güçlü olan ciddi bir klasik kokteyldir.',
+    sozler: '"A Cosmopolitan, please."'
+  },
+  {
+    id: 'pina-colada',
+    name: 'Piña Colada',
+    emoji: '🍹',
+    color: '#fff9c4',
+    aliases: ['Pina Colada'],
+    origin: 'Porto Riko',
+    ana_tur: 'kokteyl',
+    alt_tur: 'highball',
+    gorunum: 'bulanık',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['hindistan cevizi', 'ananas', 'tatlı-kremamsı'],
+    alkol_seviye: 'hafif_orta',
+    lore_short: 'Rom, hindistan cevizi kreması ve taze ananas suyu. Karayipler\'in tropikal cennetini tek bir yudumda sunan, Porto Riko\'nun resmi milli kokteyli.',
+    lore_full: [
+      { baslik: 'Köken', metin: 'Reçetesi 1954 yılında San Juan, Porto Riko\'daki Caribe Hilton otelinde barmen Ramón "Monchito" Marrero tarafından yaratılmıştır. Marrero, Karayipler\'in tüm lezzetlerini (rom, ananas ve hindistan cevizi) tek bir bardakta toplamak için 3 ay boyunca denemeler yapmıştır. 1978 yılında Porto Riko\'nun resmi içkisi ilan edilmiştir.' },
+      { baslik: 'Kültürel Etki', metin: 'Rupert Holmes\'un ünlü "Escape (The Piña Colada Song)" şarkısıyla popüler kültürde adeta ölümsüzleşti. Tropikal tatillerin, havuz başı keyiflerinin ve yaz neşesinin dünyadaki en büyük sıvı sembolüdür.' },
+      { baslik: 'Türkiye ile İlişkisi', metin: 'Yaz aylarında Güney sahillerindeki (Bodrum, Antalya, Çeşme) otel ve plaj barlarının en popüler serinleticilerindendir.' }
+    ],
+    hammadde: 'Beyaz Rom, Hindistan Cevizi Kreması (Cream of Coconut), Taze Ananas Suyu.',
+    uretim_sureci: 'Blenderda kırık buzla çekilerek (frozen) veya shakerda bol buzla çalkalanarak hazırlanır.',
+    dinlendirme: 'Dinlendirilmez.',
+    renk: 'Sarımsı krem rengi, opak ve yoğun.',
+    koku: 'Yoğun tatlı hindistan cevizi ve taze asidik ananas kokusu.',
+    tat: 'Zenrich, kremamsı ve tatlı. Hindistan cevizinin yoğun sütlü dokusu, ananasın asidik tatlılığıyla dengelenir. Rom, arkada hafif bir sıcaklık bırakır.',
+    finish: 'Uzun, kremamsı, tatlı ve meyvemsi.',
+    vucut: 'Full body',
+    rakon: 'mix',
+    sek_detay: {
+      kadeh: 'Büyük Hurricane kadehi veya oyulmuş ananasın kendisi',
+      sicaklik: 'Buz gibi (kırık buzlu veya frozen)',
+      miktar: '250 ml',
+      hazirlik: 'Kadeh kenarına bir ananas dilimi ve kokteyl şemsiyesi takılarak servis edilir.'
+    },
+    mix_detay: [
+      {
+        isim: 'Klasik Caribe Reçetesi',
+        malzemeler: ['50 ml Beyaz Rom', '30 ml Hindistan Cevizi Kreması', '90 ml Taze Ananas Suyu', 'Kırık buz'],
+        hazirlanis: 'Tüm malzemeleri blender\'a buzla beraber ekleyin. Pürüzsüz, buzlu bir kıvam (frozen) alana kadar yüksek hızda çekin. Hurricane kadehine döküp ananas dilimi ve kirazla süsleyin.',
+        neden: 'Ananas suyunun hazır kutu meyve suyu değil, taze sıkılmış olması kokteylin asit dengesi için hayati önem taşır.',
+        ortam: 'Havuz başı, plaj kulübü, tropikal yaz gecesi.'
+      }
+    ],
+    yiyecek: 'Tropikal meyveler, hafif tavuk şiş, hindistan cevizli karides ve hafif yazlık atıştırmalıklar.',
+    muzik_his: 'Reggae, Calypso, Latin pop, Rupert Holmes - Escape.',
+    mevsim: 'Yaz',
+    abv_range: '10 - 12',
+    standart_porsiyon: '250',
+    kafa_dozu: { hafif: '1 kadeh', ideal: '2 kadeh', limit_ustu: '4+ kadeh (Şeker oranı mideyi doldurur)', ertesi_gun: 2 },
+    etki_hizi: 'Orta (Şeker alkolün kana karışmasını biraz geciktirir)',
+    metabolizma: 'Orta',
+    baslangic_onerileri: ['Piña Colada'],
+    orta_seviye: ['-'],
+    premium: ['Koyu Jamaika romu (dark rum float) gezdirilmiş premium versiyonu'],
+    fiyat_araligi: '350 - 550',
+    nereden_alinir: 'Tüm sahil barları, oteller ve kokteyl mekanları.',
+    pop_kultur: '"Escape (The Piña Colada Song)" şarkısı ve şemsiyeli egzotik sunumuyla yaz tatillerinin popüler ikonudur.',
+    yanlis_bilinenler: 'İçindeki hindistan cevizi malzemesinin süt olduğu sanılır; doğrusu hindistan cevizinin etli kısmından yapılan yoğun kremadır (cream of coconut). Süt kullanılırsa kokteyl sulu kalır.',
+    sozler: '"If you like Piña Coladas, and getting caught in the rain..."'
   }
-
 ];

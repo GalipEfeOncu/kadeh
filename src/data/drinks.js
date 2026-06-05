@@ -4,7 +4,7 @@ import { votka } from './votka.js';
 import { bira } from './bira.js';
 import { sarap } from './sarap.js';
 import { gin } from './gin.js';
-import { ron } from './ron.js';
+import { rom } from './rom.js';
 import { tequila } from './tequila.js';
 import { konyak } from './konyak.js';
 import { likor } from './likor.js';
@@ -17,7 +17,7 @@ export const drinks = [
   ...bira,
   ...sarap,
   ...gin,
-  ...ron,
+  ...rom,
   ...tequila,
   ...konyak,
   ...likor,

@@ -37,7 +37,7 @@ export const raki = [
     ],
     hammadde: 'Üzüm (yaş veya kuru) ve Anason',
     uretim_sureci: 'Suma adı verilen üzüm alkolünün anason tohumlarıyla birlikte bakır imbiklerde yeniden damıtılmasıyla üretilir.',
-    dinlendirme: 'Genellikle meşe fıçı veya çelik tanklarda 1-3 ay dinlendirilir.',
+    dinlendirme: 'Çelik tanklarda 1-3 ay dinlendirilir.',
     stiller: ['Yaş Üzüm Rakısı', 'Göbek Rakısı', 'Klasik'],
     bolgeler: ['Tekirdağ', 'Ege', 'İç Anadolu'],
     renk: 'Sek iken şeffaf, su eklendiğinde bulutlu beyaz.',
@@ -64,7 +64,7 @@ export const raki = [
     yiyecek: 'Beyaz peynir, kavun, haydari, fava, lakerda, balık, ızgara etler.',
     muzik_his: 'Müzeyyen Senar, Zeki Müren, fasıl, deniz kenarı akşamları.',
     mevsim: 'Her mevsim (özellikle yaz akşamları)',
-    abv_range: '40 - 50',
+    abv_range: '45',
     standart_porsiyon: '40',
     kafa_dozu: {
       hafif: '1-2 duble',
@@ -230,7 +230,7 @@ export const raki = [
     yiyecek: 'Beyaz peynir, zeytin, kavun, ızgara köfte, mevsim meze.',
     muzik_his: 'Türk pop, arabesk, samimi sohbetler, mahallenin sesi.',
     mevsim: 'Her mevsim',
-    abv_range: '40 - 45',
+    abv_range: '50',
     standart_porsiyon: '40',
     kafa_dozu: {
       hafif: '1-2 duble',
@@ -312,7 +312,7 @@ export const raki = [
     yiyecek: 'Lakerda, füme balık, güveç, ızgara kuzu, Trakya peynirleri.',
     muzik_his: 'Fasıl, Trakya türküleri, loş ışık ve derin muhabbet.',
     mevsim: 'Sonbahar ve kış (ama her zaman)',
-    abv_range: '45 - 50',
+    abv_range: '45',
     standart_porsiyon: '40',
     kafa_dozu: {
       hafif: '1-2 duble',
@@ -394,7 +394,7 @@ export const raki = [
     yiyecek: 'Her türlü meze, lakerda, karides güveç, ızgara balık, beyaz peynir, patlıcan salatası.',
     muzik_his: 'Fasıl, canlı müzik, meyhane gürültüsü, bitmek bilmeyen sohbet.',
     mevsim: 'Her mevsim, özellikle meyhane akşamları',
-    abv_range: '45 - 50',
+    abv_range: '50',
     standart_porsiyon: '40',
     kafa_dozu: {
       hafif: '1-2 duble',
@@ -494,11 +494,11 @@ export const raki = [
     etki_hizi: 'Orta', metabolizma: 'Yavaş', baslangic_onerileri: ['-'], orta_seviye: ['Yeni Seri'], premium: ['-'], fiyat_araligi: '800 - 1200', nereden_alinir: 'Her yerde.', pop_kultur: 'Kavunla en çok yakıştırılan rakılardan.', yanlis_bilinenler: 'Kuru üzümden daha az alkollü sanılır, alakası yoktur.', sozler: '"Taze üzüm, taze başlangıçlar."'
   },
   {
-    id: 'sarisin-yas-uzum',
-    name: 'Sarışın Yaş Üzüm',
+    id: 'sari-zeybek-yas-uzum',
+    name: 'Sarı Zeybek Yaş Üzüm',
     emoji: '🥂',
     color: '#fffae6',
-    aliases: ['Sarışın'],
+    aliases: ['Sarı Zeybek'],
     origin: 'Türkiye',
     ana_tur: 'rakı',
     alt_tur: 'yaş_üzüm',
@@ -524,18 +524,18 @@ export const raki = [
     vucut: 'Light to Medium',
     rakon: 'mix',
     sek_detay: { kadeh: '', sicaklik: '', miktar: '', hazirlik: '' },
-    mix_detay: [ { isim: 'Aromatik Rakı', malzemeler: ['1 ölçü Sarışın', '0.5 ölçü Su'], hazirlanis: 'Çok az su eklenmesi tavsiye edilir, aromalar kaybolmasın diye.', neden: 'Misket üzümünün narin yapısı çok su kaldırmaz.', ortam: 'Tadım gecesi.' } ],
+    mix_detay: [ { isim: 'Aromatik Rakı', malzemeler: ['1 ölçü Sarı Zeybek', '0.5 ölçü Su'], hazirlanis: 'Çok az su eklenmesi tavsiye edilir, aromalar kaybolmasın diye.', neden: 'Misket üzümünün narin yapısı çok su kaldırmaz.', ortam: 'Tadım gecesi.' } ],
     yiyecek: 'Sushi, hafif peynirler, meyve tabakları.',
     muzik_his: 'Caz, Akustik.',
     mevsim: 'İlkbahar',
     abv_range: '45',
     standart_porsiyon: '40',
     kafa_dozu: { hafif: '1 duble', ideal: '2 duble', limit_ustu: '4+ duble', ertesi_gun: 2 },
-    etki_hizi: 'Orta', metabolizma: 'Yavaş', baslangic_onerileri: ['-'], orta_seviye: ['-'], premium: ['Sarışın'], fiyat_araligi: '1500 - 2500', nereden_alinir: 'Butik tekeller.', pop_kultur: 'Koleksiyonerlerin gözdesi.', yanlis_bilinenler: 'Sarışın dendiği için renginin sarı olduğu sanılır; içki şeffaftır, üzümü beyazdır.', sozler: '"Şarabın rakı hali."'
+    etki_hizi: 'Orta', metabolizma: 'Yavaş', baslangic_onerileri: ['-'], orta_seviye: ['-'], premium: ['Sarı Zeybek'], fiyat_araligi: '1500 - 2500', nereden_alinir: 'Butik tekeller.', pop_kultur: 'Koleksiyonerlerin gözdesi.', yanlis_bilinenler: 'Sarı Zeybek dendiği için renginin sarı olduğu sanılır; içki şeffaftır, üzümü beyazdır.', sozler: '"Şarabın rakı hali."'
   },
   {
-    id: 'bleu-caravan',
-    name: 'Bleu Caravan',
+    id: 'saki-siyah-uzum',
+    name: 'Saki Siyah Üzüm',
     emoji: '🚐',
     color: '#e6f0ff',
     aliases: ['Bleu'],
@@ -571,11 +571,11 @@ export const raki = [
     abv_range: '45',
     standart_porsiyon: '40',
     kafa_dozu: { hafif: '1 duble', ideal: '3 duble', limit_ustu: '4+ duble', ertesi_gun: 1 },
-    etki_hizi: 'Orta', metabolizma: 'Orta', baslangic_onerileri: ['-'], orta_seviye: ['-'], premium: ['Bleu Caravan'], fiyat_araligi: '1600 - 2500', nereden_alinir: 'Özel gurme marketler.', pop_kultur: 'Sanatçı tayfanın yeni favorisi.', yanlis_bilinenler: 'Fransız markası sanılır (isminin bleu olmasından), tamamen Türk üretimidir.', sozler: '"Zanaatın tadı."'
+    etki_hizi: 'Orta', metabolizma: 'Orta', baslangic_onerileri: ['-'], orta_seviye: ['-'], premium: ['Saki Siyah Üzüm'], fiyat_araligi: '1600 - 2500', nereden_alinir: 'Özel gurme marketler.', pop_kultur: 'Sanatçı tayfanın yeni favorisi.', yanlis_bilinenler: 'Fransız markası sanılır (isminin bleu olmasından), tamamen Türk üretimidir.', sozler: '"Zanaatın tadı."'
   },
   {
-    id: 'sabuhi',
-    name: 'Sabuhi',
+    id: 'mercan-raki',
+    name: 'Mercan Rakı',
     emoji: '🏺',
     color: '#ffffff',
     aliases: ['Sabûhî'],
@@ -588,7 +588,7 @@ export const raki = [
     alkol_seviye: 'sert',
     lore_short: 'Divan edebiyatından kopup gelen, sabahın ilk ışıklarıyla içilen efsanevi şarabın ruhu, butik bir rakıda yeniden canlanıyor. Limitli, yöresel ve son derece otantik.',
     lore_full: [
-      { baslik: 'Köken', metin: 'Sabuhi, Osmanlıca ve Farsçada "sabah içilen şarap" veya "sabah aydınlığı" anlamına gelir. Eski meyhanecilik geleneğini diriltme amacıyla yaratılmış butik bir projedir.' },
+      { baslik: 'Köken', metin: 'Mercan Rakı, Osmanlıca ve Farsçada "sabah içilen şarap" veya "sabah aydınlığı" anlamına gelir. Eski meyhanecilik geleneğini diriltme amacıyla yaratılmış butik bir projedir.' },
       { baslik: 'Yayılma', metin: 'Sadece bilenlerin bildiği, kulaktan kulağa yayılan gizli bir hazine gibidir.' },
       { baslik: 'Kültürel Etki', metin: 'Rakının sadece endüstriyel bir tüketim nesnesi değil, şiirsel bir obje olabileceğini kanıtlar.' },
       { baslik: 'Modern Dönem', metin: 'Etiketindeki divan esintileri ve özel reçetesiyle saygı uyandırır.' },
@@ -611,14 +611,14 @@ export const raki = [
     abv_range: '45',
     standart_porsiyon: '40',
     kafa_dozu: { hafif: '1 duble', ideal: '2 duble', limit_ustu: '3+ duble', ertesi_gun: 3 },
-    etki_hizi: 'Hızlı', metabolizma: 'Yavaş', baslangic_onerileri: ['-'], orta_seviye: ['-'], premium: ['Sabuhi'], fiyat_araligi: '1400 - 2000', nereden_alinir: 'Gurme mağazalar.', pop_kultur: 'Edebiyatçıların sırrı.', yanlis_bilinenler: 'Eski TEKEL rakılarından sanılır, yeni nesil craft bir markadır.', sozler: '"Sabah aydınlığı."'
+    etki_hizi: 'Hızlı', metabolizma: 'Yavaş', baslangic_onerileri: ['-'], orta_seviye: ['-'], premium: ['Mercan Rakı'], fiyat_araligi: '1400 - 2000', nereden_alinir: 'Gurme mağazalar.', pop_kultur: 'Edebiyatçıların sırrı.', yanlis_bilinenler: 'Eski TEKEL rakılarından sanılır, yeni nesil craft bir markadır.', sozler: '"Sabah aydınlığı."'
   },
   {
-    id: 'taris-yas-uzum',
-    name: 'Tariş Yaş Üzüm',
+    id: 'fasil-yas-uzum',
+    name: 'Fasıl Yaş Üzüm',
     emoji: '🍇',
     color: '#e6f7ff',
-    aliases: ['Tariş'],
+    aliases: ['Fasıl'],
     origin: 'Türkiye',
     ana_tur: 'rakı',
     alt_tur: 'yaş_üzüm',
@@ -628,13 +628,13 @@ export const raki = [
     alkol_seviye: 'sert',
     lore_short: 'Ege çiftçisinin emeği, kooperatif dayanışmasının şişedeki hali. Kendi bağlarının üzümünü kendi işleyen, mütevazı ama dürüst bir Ege rakısı.',
     lore_full: [
-      { baslik: 'Köken', metin: 'Tariş, Türkiye\'nin en köklü tarım satış kooperatifidir. Zeytinyağı ve incirden sonra, bölgedeki üzüm üreticilerinin mahsullerini değerlendirmek için alkol pazarına da girmiştir.' },
+      { baslik: 'Köken', metin: 'Fasıl, Türkiye\'nin en köklü tarım satış kooperatifidir. Zeytinyağı ve incirden sonra, bölgedeki üzüm üreticilerinin mahsullerini değerlendirmek için alkol pazarına da girmiştir.' },
       { baslik: 'Yayılma', metin: 'Özellikle Ege bölgesinde "çiftçinin kendi malı" olduğu için lokal bir milliyetçilikle çok sevilir.' },
       { baslik: 'Kültürel Etki', metin: 'Ucuz fiyat politikası gütmeden, dürüst ve temiz bir rakı yapma çabasıdır.' },
       { baslik: 'Modern Dönem', metin: 'Pazardaki büyük devlere karşı bir alternatif arayan yöre halkının tercihidir.' },
       { baslik: 'Türkiye ile İlişkisi', metin: 'İzmir ve çevresinde market raflarında mutlaka kendine yer bulur.' }
     ],
-    hammadde: 'Tariş kooperatifi yaş üzümleri, Ege anasonu.',
+    hammadde: 'Fasıl kooperatifi yaş üzümleri, Ege anasonu.',
     uretim_sureci: 'Standart rakı damıtması.',
     dinlendirme: 'Çelik tank.',
     renk: 'Bulutlu beyaz.',
@@ -651,7 +651,7 @@ export const raki = [
     abv_range: '45',
     standart_porsiyon: '40',
     kafa_dozu: { hafif: '1-2 duble', ideal: '3 duble', limit_ustu: '5+ duble', ertesi_gun: 3 },
-    etki_hizi: 'Orta', metabolizma: 'Orta', baslangic_onerileri: ['-'], orta_seviye: ['Tariş Yaş Üzüm'], premium: ['-'], fiyat_araligi: '700 - 950', nereden_alinir: 'Tariş mağazaları, Ege tekelleri.', pop_kultur: 'Kooperatifçiliğin alkoldeki yüzü.', yanlis_bilinenler: 'Sadece zeytinyağı markası sanılır.', sozler: '"Topraktan kadehe."'
+    etki_hizi: 'Orta', metabolizma: 'Orta', baslangic_onerileri: ['-'], orta_seviye: ['Fasıl Yaş Üzüm'], premium: ['-'], fiyat_araligi: '700 - 950', nereden_alinir: 'Fasıl mağazaları, Ege tekelleri.', pop_kultur: 'Kooperatifçiliğin alkoldeki yüzü.', yanlis_bilinenler: 'Sadece zeytinyağı markası sanılır.', sozler: '"Topraktan kadehe."'
   },
   {
     id: 'efe-mese-fici',

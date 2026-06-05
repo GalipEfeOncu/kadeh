@@ -15,7 +15,7 @@ export const kategoriler = [
   },
   {
     id: 'şarap',
-    name: 'Türk Şarabı',
+    name: 'Şarap',
     emoji: '🍷',
     aciklama: `Anadolu, dünyanın en eski bağ arazilerinden birinin üzerinde duruyor. Boğazkere'nin gücü, Kalecik Karası'nın zerafeti, Emir'in tazeliği; bu topraklar çok şey söylüyor.`,
     renk: '#8b1a1a',
@@ -42,8 +42,8 @@ export const kategoriler = [
     ],
   },
   {
-    id: 'ron',
-    name: 'Ron (Rum)',
+    id: 'rom',
+    name: 'Rom',
     emoji: '🥃',
     aciklama: `Şeker kamışının fermante olmuş ruhu. Karayip güneşi, Küba plajları ve korsan efsaneleri bir şişeye sığmış. Beyazından isli mezcaline, 3 yıllığından 12 yıllığına kadar geniş bir dünya.`,
     renk: '#8b4513',
@@ -80,10 +80,10 @@ export const kategoriler = [
     ],
   },
   {
-    id: 'liköl',
-    name: 'Liköller',
+    id: 'likor',
+    name: 'Likör',
     emoji: '🍹',
-    aciklama: `Kahveden kremaya, acı otlardan meyveli tatlılığa. Kokteyllerin sırrı, digestifin sonu, aperitifin başlangıcı. Her liköl arkasında bir reçete ve bir kültür taşır.`,
+    aciklama: `Kahveden kremaya, acı otlardan meyveli tatlılığa. Kokteyllerin sırrı, digestifin sonu, aperitifin başlangıcı. Her likör arkasında bir reçete ve bir kültür taşır.`,
     renk: '#c81a5a',
     alt_turler: [
       { id: 'aperitif', label: 'Aperitif' },
