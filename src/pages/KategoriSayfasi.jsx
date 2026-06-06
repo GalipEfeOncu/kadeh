@@ -74,33 +74,36 @@ function AnimatedCard({ drink, index, isReversed, onClick }) {
         </div>
       </div>
 
-      {/* ── DESKTOP: Orijinal büyük layout (mobile'da gizli) ── */}
+      {/* ── DESKTOP: Kompakt yatay kart (mobile'da gizli) ── */}
       <div
         {...sharedWrapperProps}
-        className={`hidden md:flex flex-row gap-8 lg:gap-16 items-center cursor-pointer group ${isReversed ? 'flex-row-reverse' : ''}`}
+        className={`hidden md:flex flex-row gap-6 lg:gap-10 items-center cursor-pointer group ${isReversed ? 'flex-row-reverse' : ''}`}
       >
+        {/* Görsel — sabit kare, aspect-ratio yok */}
         <div
-          className="w-5/12 aspect-[4/3] bg-[#1a130c] rounded-3xl flex items-center justify-center text-9xl border border-[#2a2015] transition-all duration-500 group-hover:border-amberAccent group-hover:scale-[1.02] shadow-xl"
-          style={{ boxShadow: `0 20px 60px ${drink.color}10` }}
+          className="flex-shrink-0 w-36 h-36 lg:w-44 lg:h-44 bg-[#1a130c] rounded-2xl flex items-center justify-center text-5xl lg:text-6xl border border-[#2a2015] transition-all duration-500 group-hover:border-amberAccent group-hover:scale-[1.03] shadow-lg"
+          style={{ boxShadow: `0 12px 40px ${drink.color}12` }}
         >
           <span className="group-hover:scale-110 transition-transform duration-500">{drink.emoji}</span>
         </div>
-        <div className="w-7/12 flex flex-col justify-center">
-          <div className="flex flex-wrap gap-2 mb-6">
+
+        {/* İçerik */}
+        <div className="flex-1 min-w-0 flex flex-col justify-center py-1">
+          <div className="flex flex-wrap gap-1.5 mb-2">
             {[drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map((t, idx) => (
-              <span key={`${t}-${idx}`} className="text-xs uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
+              <span key={`${t}-${idx}`} className="text-[10px] uppercase tracking-wider font-semibold px-2.5 py-0.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
                 {t}
               </span>
             ))}
           </div>
-          <h2 className="font-serif text-7xl font-bold text-textMain mb-6 group-hover:text-amberAccent transition-colors duration-300">
+          <h2 className="font-serif text-3xl lg:text-4xl font-bold text-textMain mb-2 group-hover:text-amberAccent transition-colors duration-300 leading-tight">
             {drink.name}
           </h2>
-          <p className="text-textMuted text-2xl leading-relaxed mb-8 max-w-2xl">
+          <p className="text-textMuted text-sm leading-relaxed mb-3 line-clamp-2">
             {drink.lore_short}
           </p>
-          <span className="inline-flex items-center gap-3 text-sm uppercase tracking-widest font-semibold text-textMain group-hover:text-amberAccent transition-colors">
-            Hikayeyi Oku <span className="text-amberAccent text-xl transition-transform group-hover:translate-x-2">→</span>
+          <span className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-textMuted group-hover:text-amberAccent transition-colors">
+            Hikayeyi Oku <span className="text-amberAccent transition-transform group-hover:translate-x-1">→</span>
           </span>
         </div>
       </div>
@@ -194,16 +197,16 @@ export default function KategoriSayfasi() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
 
         {/* Kategori başlığı */}
-        <div className="py-8 md:py-20 border-b border-[#2a2015] mb-8 md:mb-12">
-          <div className="flex items-start gap-4 md:gap-10">
+        <div className="py-8 md:py-24 border-b border-[#2a2015] mb-8 md:mb-12">
+          <div className="flex items-start gap-4 md:gap-10 lg:gap-12">
             <div
-              className="w-14 h-14 md:w-28 md:h-28 flex-shrink-0 rounded-2xl bg-[#1a130c] border border-[#2a2015] flex items-center justify-center text-3xl md:text-5xl"
+              className="w-14 h-14 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0 rounded-2xl bg-[#1a130c] border border-[#2a2015] flex items-center justify-center text-3xl md:text-6xl lg:text-7xl"
               style={{ boxShadow: `0 10px 40px ${kategori.renk}15` }}
             >
               {kategori.emoji}
             </div>
             <div>
-              <h1 className="font-serif text-2xl md:text-6xl font-bold mb-2 md:mb-4">{kategori.name}</h1>
+              <h1 className="font-serif text-2xl md:text-6xl lg:text-7xl font-bold mb-2 md:mb-4">{kategori.name}</h1>
               <p className="text-textMuted text-sm md:text-xl leading-relaxed max-w-2xl">{kategori.aciklama}</p>
             </div>
           </div>
@@ -239,7 +242,7 @@ export default function KategoriSayfasi() {
         </div>
 
         {/* İçki listesi */}
-        <div className="flex flex-col gap-3 md:gap-32 pb-20 md:pb-32">
+        <div className="flex flex-col gap-3 md:gap-10 lg:gap-12 pb-20 md:pb-16">
           {filtrelenmis.length > 0 ? (
             filtrelenmis.map((drink, index) => (
               <AnimatedCard
