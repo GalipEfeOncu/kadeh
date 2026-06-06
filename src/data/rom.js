@@ -496,5 +496,82 @@ export const rom = [
     standart_porsiyon: '40',
     kafa_dozu: { hafif: '2', ideal: '4', limit_ustu: '6+', ertesi_gun: 2 },
     etki_hizi: 'Hızlı', metabolizma: 'Orta', baslangic_onerileri: ['Captain Morgan'], orta_seviye: ['Kraken'], premium: ['-'], fiyat_araligi: '900 - 1200', nereden_alinir: 'Tekel, Market.', pop_kultur: 'Karanlık estetiğiyle alternatif barların favorisi.', yanlis_bilinenler: 'Sadece renginden dolayı çok yaşlı sanılır, rengi karamel ve baharattan gelir.', sozler: '"Release the Kraken!"'
+  },
+  {
+    id: 'goslings-black-seal',
+    name: 'Goslings Black Seal',
+    emoji: '🥃',
+    color: '#1a0a00',
+    aliases: ['Goslings', 'Black Seal', 'Bermuda Romu'],
+    origin: 'Bermuda',
+    ana_tur: 'rom',
+    alt_tur: 'koyu',
+    gorunum: 'koyu_amber',
+    olgunlasma: 'fıçılanmış',
+    aroma: ['pekmez', 'karamel', 'baharat', 'vanilya', 'meşe'],
+    alkol_seviye: 'sert',
+    lore_short: 'Bermuda\'nın karanlık hazinesi. 1806\'dan beri üretilen, üç kez fıçıda dinlendirilmiş, koyu ve yoğun bir rom. Dark \'n\' Stormy kokteylinin resmi ve tek yasal bileşeni.',
+    lore_full: [
+      {
+        baslik: 'Köken',
+        metin: 'Gosling ailesi, 1806 yılında İngiltere\'den yola çıktı ve bir fırtına sonrası Bermuda\'ya sürüklendi. Adaya yerleşen aile, rom ithal edip kendi tariflerine göre harmanlayarak satmaya başladı. İlk yıllarda rom, ağzı mühürlü siyah şişelerde satıldı; bu mühürlerin rengi yüzünden rom \"Black Seal\" olarak anılmaya başladı ve isim kalıcı hale geldi.\n\nGoslings Black Seal, Bermuda\'nın en eski ve en saygın içki markasıdır. 200 yılı aşkın aile geleneğiyle üretilen bu koyu rom, adanın kültürel mirasının ayrılmaz bir parçasıdır.'
+      },
+      {
+        baslik: 'Yayılma',
+        metin: 'Goslings\'in dünya çapındaki ünü, büyük ölçüde Dark \'n\' Stormy kokteylinin popülerleşmesiyle geldi. Bu klasik kokteyl yalnızca Goslings Black Seal ile yapılabilir; marka, \"Dark \'n\' Stormy\" adını tescil ettirmiş ve başka romlarla yapılan versiyonlara yasal itiraz etmiştir. Bu, bir kokteylin tek bir markayla bu denli bütünleştiği nadir örneklerden biridir.\n\nBugün Goslings, Amerika, İngiltere ve Karayipler\'de yaygın biçimde dağıtılmaktadır. Bermuda\'yı ziyaret eden turistlerin neredeyse tamamı bu romu tadar ve adadan bir şişeyle döner.'
+      },
+      {
+        baslik: 'Kültürel Etki',
+        metin: 'Bermuda\'da Goslings Black Seal, yalnızca bir içki değil, ulusal bir semboldür. Bermuda Day kutlamalarında, Noel pastalarında, rum keklerinde ve geleneksel sofralarda Goslings vazgeçilmezdir. Adanın restoranları, barları ve otelleri bu romu standart olarak sunar.\n\nKoyu rom kategorisinin \"referans şişesi\" olarak kabul edilen Black Seal, karanlık renkli romların sek içilebileceğini ve kokteyllere derinlik katabileceğini kanıtlamıştır.'
+      },
+      {
+        baslik: 'Modern Dönem',
+        metin: 'Goslings ailesi hâlâ üretimin başındadır ve markanın bağımsızlığını korumaktadır. Son yıllarda Old Rum ve Family Reserve gibi premium serilerle portföyünü genişletmiştir. Ancak Black Seal, amiral gemisi olmaya devam etmektedir.\n\nCraft kokteyl hareketinin yükselişiyle birlikte koyu rom kategorisine olan ilgi artmıştır. Tiki barlar, modern speakeasy\'ler ve deneysel miksoloji mekanları, Dark \'n\' Stormy\'nin ötesinde Goslings\'i farklı tariflerde de kullanmaya başlamıştır.'
+      },
+      {
+        baslik: 'Türkiye ile İlişkisi',
+        metin: 'Türkiye\'de koyu rom kategorisi, beyaz ve baharatlı romlara kıyasla daha az bilinir. Ancak miksoloji kültürünün gelişmesiyle birlikte Goslings Black Seal, nitelikli barların raflarında yerini almaya başlamıştır. Dark \'n\' Stormy, İstanbul ve İzmir\'in premium kokteyl barlarında artan bir talep görmektedir.'
+      }
+    ],
+    hammadde: 'Bermuda şeker kamışı melası.',
+    uretim_sureci: 'Üç ayrı damıtma partisinden elde edilen romlar, meşe fıçılarda ayrı ayrı yaşlandırılır ve ardından ustaca harmanlanır.',
+    dinlendirme: 'Amerikan meşe (ex-bourbon) fıçılarda 3 yıla kadar. Üç farklı yaştaki romun harmanı.',
+    renk: 'Çok koyu kahverengi, neredeyse siyah. Mürekkep gibi yoğun.',
+    koku: 'Pekmez, esmer şeker, kavrulmuş fındık, tarçın, vanilya ve hafif dumanlı meşe.',
+    tat: 'Yoğun ve dolgun. Pekmez, karamel, tarçın ve zencefil baharatları. Tatlı ama dengeleri doğru, yapışkan değil. Arkada hafif acımsı kakao.',
+    finish: 'Uzun, sıcak ve baharatlı. Karamel ve meşe son notada kalıcı.',
+    vucut: 'Full body',
+    rakon: 'mix',
+    sek_detay: {
+      kadeh: 'Rock glass veya Snifter',
+      sicaklik: 'Oda sıcaklığı veya tek büyük buz',
+      miktar: '40 ml',
+      hazirlik: 'Sek içimi mümkün ve keyiflidir; büyük bir buz küresiyle yavaşça yudumlanır. Koyu romun yoğun aromaları oda sıcaklığında daha iyi açılır.'
+    },
+    mix_detay: [
+      {
+        isim: 'Dark \'n\' Stormy',
+        malzemeler: ['50 ml Goslings Black Seal', '120 ml Zencefilli Gazoz (Ginger Beer)', 'Lime dilimi', 'Bol buz'],
+        hazirlanis: 'Uzun bardağa buzu doldurun. Üzerine zencefilli gazozu ekleyin. En son Goslings\'i yavaşça üstten dökün ki katmanlar oluşsun. Lime ile süsleyin.',
+        neden: 'Goslings\'in pekmezimsi yoğunluğu ile zencefilin yakıcı tazeliği, rom dünyasının en ikonik çiftlerinden birini oluşturur.',
+        ortam: 'Sahil barı, yaz akşamı, gün batımı.'
+      }
+    ],
+    yiyecek: 'Barbekü, karamelize domuz pirzolası, muz flambe, çikolatalı tatlılar, rum keki.',
+    muzik_his: 'Reggae, Calypso, yaz akşamı melodileri, deniz esintisi.',
+    mevsim: 'Her mevsim (özellikle yaz)',
+    abv_range: '40',
+    standart_porsiyon: '40',
+    kafa_dozu: { hafif: '1-2 kadeh', ideal: '3 kadeh', limit_ustu: '4+ kadeh', ertesi_gun: 3 },
+    etki_hizi: 'Orta (20 dk)',
+    metabolizma: 'Orta',
+    baslangic_onerileri: ['Goslings Black Seal'],
+    orta_seviye: ['Goslings Old Rum'],
+    premium: ['Goslings Family Reserve'],
+    fiyat_araligi: '800 - 1300',
+    nereden_alinir: 'Premium içki butikleri, duty free mağazaları.',
+    pop_kultur: 'Dark \'n\' Stormy kokteylinin resmi ve tek yasal romu. Bermuda\'nın ulusal simgesi.',
+    yanlis_bilinenler: 'Koyu rengin yaşla ilgili olduğu sanılır; aslında renk büyük ölçüde fıçı seçiminden ve harmanlama sürecinden gelir, mutlaka çok yaşlı olduğu anlamına gelmez.',
+    sozler: '"The dark side of rum."'
   }
 ];

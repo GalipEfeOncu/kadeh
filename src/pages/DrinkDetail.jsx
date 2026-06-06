@@ -1,6 +1,23 @@
 import { useState, useEffect } from 'react';
 import { BookOpen, Droplets, Utensils, GlassWater, BarChart } from 'lucide-react';
 
+const renderRiskCircles = (score) => {
+  const total = 5;
+  const filled = Math.min(total, Math.max(0, parseInt(score) || 0));
+  return (
+    <div className="flex gap-1.5 items-center">
+      {Array.from({ length: total }).map((_, idx) => (
+        <span
+          key={idx}
+          className={`w-3 h-3 rounded-full border border-current ${
+            idx < filled ? 'bg-amberAccent text-amberAccent' : 'bg-transparent text-[#3a2c1e]'
+          }`}
+        />
+      ))}
+    </div>
+  );
+};
+
 export default function DrinkDetail({ drink }) {
   const [activeTab, setActiveTab] = useState('lore');
 
@@ -20,16 +37,15 @@ export default function DrinkDetail({ drink }) {
     <div className="w-full px-4 md:px-8 lg:px-16 py-8 md:py-12 lg:py-16 max-w-6xl mx-auto">
       <div className="flex flex-row gap-5 md:gap-10 items-center md:items-start mb-10 md:mb-16">
         <div
-          className="w-20 h-20 md:w-36 md:h-36 lg:w-48 lg:h-48 flex-shrink-0 rounded-2xl md:rounded-3xl flex items-center justify-center text-4xl md:text-6xl lg:text-8xl border border-[#2a2015] bg-[#1a130c] shadow-2xl"
-          style={{ boxShadow: `0 20px 60px ${drink.color}15` }}
+          className="w-20 h-20 md:w-36 md:h-36 lg:w-48 lg:h-48 flex-shrink-0 rounded-2xl md:rounded-3xl flex items-center justify-center text-4xl md:text-6xl lg:text-8xl border border-[#2a2015] bg-[#1a130c] shadow-xl"
         >
           {drink.emoji}
         </div>
         <div className="flex-1 min-w-0">
           <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-6">{drink.name}</h1>
           <div className="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-8">
-            {[drink.ana_tur, drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map(t => (
-              <span key={t} className="text-xs md:text-sm uppercase tracking-wider font-semibold px-3 md:px-4 py-1 md:py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
+            {[drink.ana_tur, drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map((t, idx) => (
+              <span key={`tag-${idx}`} className="text-xs md:text-sm uppercase tracking-wider font-semibold px-3 md:px-4 py-1 md:py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
                 {t}
               </span>
             ))}
@@ -43,29 +59,32 @@ export default function DrinkDetail({ drink }) {
         {drink.lore_short}
       </p>
 
-      <div className="flex overflow-x-auto gap-1 md:gap-2 lg:gap-4 mb-8 md:mb-12 border-b border-[#2a2015] pb-px custom-scrollbar">
-        {tabs.map((tab) => {
-          const Icon = tab.icon;
-          return (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-3 md:px-5 py-3 md:py-4 text-xs md:text-sm lg:text-base font-medium whitespace-nowrap border-b-2 transition-colors ${
-                activeTab === tab.id
-                  ? 'border-amberAccent text-amberAccent bg-[#2a2015]/30 rounded-t-lg'
-                  : 'border-transparent text-textMuted hover:text-textMain hover:bg-[#1a130c] rounded-t-lg'
-              }`}
-            >
-              <Icon size={15} className="flex-shrink-0" />
-              {tab.label}
-            </button>
-          );
-        })}
+      <div className="relative mb-8 md:mb-12">
+        <div className="flex overflow-x-auto gap-1 md:gap-2 lg:gap-4 border-b border-[#2a2015] pb-px custom-scrollbar">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-2 px-3 md:px-5 py-3 md:py-4 text-xs md:text-sm lg:text-base font-medium whitespace-nowrap border-b-2 transition-colors ${
+                  activeTab === tab.id
+                    ? 'border-amberAccent text-amberAccent bg-[#2a2015]/30 rounded-t-lg'
+                    : 'border-transparent text-textMuted hover:text-textMain hover:bg-[#1a130c] rounded-t-lg'
+                }`}
+              >
+                <Icon size={15} className="flex-shrink-0" />
+                {tab.label}
+              </button>
+            );
+          })}
+        </div>
+        <div className="absolute right-0 top-0 bottom-px w-8 bg-gradient-to-l from-[#1a130c] to-transparent pointer-events-none md:hidden" />
       </div>
 
       <div className="bg-[#1a130c] border border-[#2a2015] rounded-2xl md:rounded-3xl p-5 md:p-8 lg:p-12 min-h-[400px] shadow-xl">
         {activeTab === 'lore' && (
-          <div>
+          <div className="animate-tab-fade">
             {/* Özet */}
             <div className="mb-12 pb-12 border-b border-[#2a2015]">
               <span className="text-xs uppercase tracking-widest text-amberAccent font-semibold mb-5 block">Özet</span>
@@ -113,7 +132,7 @@ export default function DrinkDetail({ drink }) {
         )}
 
         {activeTab === 'uretim' && (
-          <div className="space-y-12">
+          <div className="animate-tab-fade space-y-12">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
               <div className="space-y-10">
                 <div>
@@ -129,14 +148,23 @@ export default function DrinkDetail({ drink }) {
                   <p className="text-textMain text-lg leading-relaxed">{drink.dinlendirme}</p>
                 </div>
               </div>
-              <div className="bg-[#0f0a06] p-8 lg:p-10 rounded-2xl border border-[#2a2015] space-y-6">
-                <h4 className="font-serif text-3xl text-amberAccent mb-6">Tadım Profili</h4>
-                <div className="space-y-5 text-lg">
-                  <div className="flex flex-col"><span className="text-textMuted uppercase text-sm tracking-widest mb-1">Renk</span>{drink.renk}</div>
-                  <div className="flex flex-col"><span className="text-textMuted uppercase text-sm tracking-widest mb-1">Koku</span>{drink.koku}</div>
-                  <div className="flex flex-col"><span className="text-textMuted uppercase text-sm tracking-widest mb-1">Tat</span>{drink.tat}</div>
-                  <div className="flex flex-col"><span className="text-textMuted uppercase text-sm tracking-widest mb-1">Finish</span>{drink.finish}</div>
-                  <div className="flex flex-col"><span className="text-textMuted uppercase text-sm tracking-widest mb-1">Body</span>{drink.vucut}</div>
+
+              {/* Tadım Profili */}
+              <div className="bg-[#0f0a06] p-8 lg:p-10 rounded-2xl border border-[#2a2015]">
+                <h4 className="font-serif text-3xl text-amberAccent mb-8 border-b border-[#2a2015] pb-4">Tadım Profili</h4>
+                <div className="space-y-6 text-lg">
+                  {[
+                    { label: 'Renk', val: drink.renk },
+                    { label: 'Koku', val: drink.koku },
+                    { label: 'Tat', val: drink.tat },
+                    { label: 'Bitiş', val: drink.finish },
+                    { label: 'Gövde (Body)', val: drink.vucut }
+                  ].filter(item => item.val).map((item, idx) => (
+                    <div key={idx} className="flex flex-col md:flex-row md:items-start gap-1 md:gap-8 border-b border-[#2a2015]/40 pb-4 last:border-b-0 last:pb-0">
+                      <span className="text-textMuted uppercase text-xs tracking-widest font-semibold md:w-32 flex-shrink-0 mt-1">{item.label}</span>
+                      <span className="text-textMain leading-relaxed">{item.val}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -144,7 +172,7 @@ export default function DrinkDetail({ drink }) {
         )}
 
         {activeTab === 'nasil_icilir' && (
-          <div className="space-y-12">
+          <div className="animate-tab-fade space-y-12">
             {drink.sek_detay && drink.sek_detay.kadeh && (
               <div className="mb-12">
                 <h3 className="font-serif text-3xl text-amberAccent mb-6">Sek İçim</h3>
@@ -195,7 +223,7 @@ export default function DrinkDetail({ drink }) {
         )}
 
         {activeTab === 'eslesme' && (
-          <div className="space-y-10">
+          <div className="animate-tab-fade space-y-10">
             <div>
               <h3 className="font-serif text-3xl text-amberAccent mb-6">Yemek Eşleşmesi</h3>
               <p className="text-textMain text-xl leading-relaxed bg-[#0f0a06] p-8 rounded-2xl border border-[#2a2015]">{drink.yiyecek}</p>
@@ -214,7 +242,7 @@ export default function DrinkDetail({ drink }) {
         )}
 
         {activeTab === 'doz_kultur' && (
-          <div className="space-y-12">
+          <div className="animate-tab-fade space-y-12">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
               <div>
                 <h3 className="font-serif text-3xl text-amberAccent mb-6">Doz (70kg birey)</h3>
@@ -237,7 +265,7 @@ export default function DrinkDetail({ drink }) {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-textMuted">Akşamdan Kalma Riski</span>
-                    <span className="text-xl">{drink.kafa_dozu?.ertesi_gun} / 5</span>
+                    {renderRiskCircles(drink.kafa_dozu?.ertesi_gun)}
                   </div>
                 </div>
               </div>
@@ -246,9 +274,12 @@ export default function DrinkDetail({ drink }) {
                 <h3 className="font-serif text-3xl text-amberAccent mb-6">Trivia</h3>
                 <div className="space-y-8">
                   {drink.sozler && (
-                    <blockquote className="border-l-4 border-amberAccent pl-6 italic text-2xl text-textMuted leading-relaxed">
-                      {drink.sozler}
-                    </blockquote>
+                    <div className="relative py-4">
+                      <span className="absolute top-0 left-0 text-7xl font-serif text-[#2a2015] leading-none select-none pointer-events-none">“</span>
+                      <blockquote className="pl-8 italic text-2xl text-textMuted leading-relaxed relative z-10 font-serif">
+                        {drink.sozler}
+                      </blockquote>
+                    </div>
                   )}
                   {drink.yanlis_bilinenler && (
                     <div className="bg-[#1a130c] border border-[#2a2015] p-6 rounded-xl">

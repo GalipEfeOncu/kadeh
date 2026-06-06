@@ -75,6 +75,7 @@ export const kategoriler = [
     renk: '#8b3010',
     alt_turler: [
       { id: 'fransız', label: 'Fransız Cognac' },
+      { id: 'vs', label: 'VS' },
       { id: 'yerli', label: 'Yerli' },
       { id: 'brandy', label: 'Brandy' },
     ],
@@ -128,7 +129,6 @@ export const kategoriler = [
     alt_turler: [
       { id: 'standart', label: 'Standart' },
       { id: 'premium', label: 'Premium' },
-      { id: 'craft', label: 'Craft' },
     ],
   },
   {

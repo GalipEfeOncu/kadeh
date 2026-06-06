@@ -523,7 +523,12 @@ export const raki = [
     finish: 'Uzun, çiçeksi ve parfüm gibi.',
     vucut: 'Light to Medium',
     rakon: 'mix',
-    sek_detay: { kadeh: '', sicaklik: '', miktar: '', hazirlik: '' },
+    sek_detay: {
+      kadeh: 'Rakı kadehi (ince belli, uzun)',
+      sicaklik: 'Oda sıcaklığında veya hafif soğutulmuş',
+      miktar: '2-3 cl (tek kadeh)',
+      hazirlik: 'Kadehe önce rakı konur, üzerine yavaşça soğuk su eklenir. Misket üzümünün narin çiçeksi aromasını korumak için su oranı 1:1 tutulmalı, buz eklenmemelidir.'
+    },
     mix_detay: [ { isim: 'Aromatik Rakı', malzemeler: ['1 ölçü Sarı Zeybek', '0.5 ölçü Su'], hazirlanis: 'Çok az su eklenmesi tavsiye edilir, aromalar kaybolmasın diye.', neden: 'Misket üzümünün narin yapısı çok su kaldırmaz.', ortam: 'Tadım gecesi.' } ],
     yiyecek: 'Sushi, hafif peynirler, meyve tabakları.',
     muzik_his: 'Caz, Akustik.',
@@ -563,7 +568,12 @@ export const raki = [
     finish: 'Çok uzun ve tatminkar.',
     vucut: 'Full body',
     rakon: 'mix',
-    sek_detay: { kadeh: '', sicaklik: '', miktar: '', hazirlik: '' },
+    sek_detay: {
+      kadeh: 'Rakı kadehi (ince belli, uzun)',
+      sicaklik: 'Oda sıcaklığında veya hafif soğutulmuş',
+      miktar: '2-3 cl (tek kadeh)',
+      hazirlik: 'Kadehe önce rakı konur, üzerine yavaşça soğuk su eklenir. Siyah üzümün kendine has karakteristik üzüm notalarını hissetmek için su/rakı oranı 1:1 idealdir. Buz isteğe bağlı ama az tercih edilir.'
+    },
     mix_detay: [ { isim: 'Craft Rakı', malzemeler: ['Rakı', 'Su'], hazirlanis: 'Sadece kaliteli şişe suyu ile.', neden: 'Mineralli sular rakının yapısını bozabilir.', ortam: 'Yakın dostlarla özel bir kutlama.' } ],
     yiyecek: 'Artizan peynirler, carpaccio, gurme mezeler.',
     muzik_his: 'Indie, Lo-Fi, Alternatif Rock.',
@@ -603,7 +613,12 @@ export const raki = [
     finish: 'Kalıcı ve güçlü.',
     vucut: 'Full body',
     rakon: 'mix',
-    sek_detay: { kadeh: '', sicaklik: '', miktar: '', hazirlik: '' },
+    sek_detay: {
+      kadeh: 'Rakı kadehi (ince belli, uzun)',
+      sicaklik: 'Oda sıcaklığında veya hafif soğutulmuş',
+      miktar: '2-3 cl (tek kadeh)',
+      hazirlik: 'Kadehe önce rakı konur, üzerine yavaşça soğuk su eklenir. Geleneksel karakteri tam hissetmek için buzsuz içimi tavsiye edilir. Su/rakı oranı kişisel tercihe göre 1:1 veya 2:1 olabilir.'
+    },
     mix_detay: [ { isim: 'Geleneksel Su', malzemeler: ['Rakı', 'Su'], hazirlanis: 'Buzsuz içimi tavsiye edilir.', neden: 'Buz aromaları kilitler.', ortam: 'Tarihi bir köşk, edebiyat sohbeti.' } ],
     yiyecek: 'Ağır et yemekleri, lakerda, pastırma.',
     muzik_his: 'Klasik Türk Müziği, Ney taksimleri.',
@@ -643,7 +658,12 @@ export const raki = [
     finish: 'Orta uzunlukta.',
     vucut: 'Medium body',
     rakon: 'mix',
-    sek_detay: { kadeh: '', sicaklik: '', miktar: '', hazirlik: '' },
+    sek_detay: {
+      kadeh: 'Rakı kadehi (ince belli, uzun)',
+      sicaklik: 'Oda sıcaklığında veya hafif soğutulmuş',
+      miktar: '2-3 cl (tek kadeh)',
+      hazirlik: 'Kadehe önce rakı konur, üzerine yavaşça soğuk su eklenir. Yaş üzümün yumuşak ve meyvemsi yapısı sayesinde su oranı 1:1 veya 2:1 olabilir. Buz isteğe bağlı.'
+    },
     mix_detay: [ { isim: 'Ege Usulü', malzemeler: ['Rakı', 'Soğuk Su'], hazirlanis: 'Buzlu', neden: 'Ege sıcaklarında ferahlık şart.', ortam: 'Köy kahvesi, deniz kenarı yazlık.' } ],
     yiyecek: 'Zeytin, zeytinyağlı tabağı, peynir.',
     muzik_his: 'Ege türküleri.',

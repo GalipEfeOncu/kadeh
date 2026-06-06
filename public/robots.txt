@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kadeh.vercel.app/sitemap.xml

@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
-import { Wine, BookOpen, Heart, Compass } from 'lucide-react';
+import { Wine, BookOpen, Heart, Compass, Droplets, GlassWater, Utensils, BarChart } from 'lucide-react';
 
 const pillars = [
   {
@@ -19,7 +21,19 @@ const pillars = [
   },
 ];
 
+const scopeItems = [
+  { icon: BookOpen, title: 'Hikaye & Köken', desc: 'Köken hikayesi ve kültürel bağlamı.' },
+  { icon: Droplets, title: 'Üretim & Profil', desc: 'Üretim süreci ve detaylı tadım profili.' },
+  { icon: GlassWater, title: 'Nasıl İçilir', desc: 'Nasıl ve hangi kadehle içileceği, servis ritüelleri.' },
+  { icon: Utensils, title: 'Eşleşmeler', desc: 'Uyumlu yemekler, ideal mevsim ve müzik/his eşleşmesi.' },
+  { icon: BarChart, title: 'Doz & Kültür', desc: 'Alkol oranı, kafa dozu bilgisi ve popüler kültürdeki yeri.' },
+];
+
 export default function About() {
+  useEffect(() => {
+    document.title = 'Hakkında | Kadeh';
+  }, []);
+
   return (
     <div className="flex-1 overflow-y-auto custom-scrollbar">
       <div className="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-24">
@@ -61,22 +75,21 @@ export default function About() {
         </div>
 
         {/* İçeriklerin kapsamı */}
-        <div className="mb-20 md:mb-28 bg-[#1a130c] border border-[#2a2015] rounded-2xl p-8 md:p-10">
-          <h2 className="font-serif text-2xl font-bold mb-6">Her içki sayfasında neler var?</h2>
-          <ul className="space-y-4 text-textMuted">
-            {[
-              'Köken hikayesi ve kültürel bağlamı',
-              'Üretim süreci ve tadım profili',
-              'Nasıl ve hangi kadeyle içilir',
-              'Yemek, mevsim ve ortam eşleşmeleri',
-              'Doz bilgisi ve popüler kültürdeki yeri',
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="text-amberAccent mt-0.5 flex-shrink-0">›</span>
-                <span>{item}</span>
-              </li>
+        <div className="mb-20 md:mb-28">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-textMain mb-8">Her içki sayfasında neler var?</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {scopeItems.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="bg-[#1a130c] border border-[#2a2015] rounded-xl p-6 flex flex-col justify-between hover:border-amberAccent transition-colors duration-300">
+                <div>
+                  <div className="w-9 h-9 rounded-lg bg-[#0f0a06] border border-[#2a2015] flex items-center justify-center mb-4 flex-shrink-0">
+                    <Icon size={16} className="text-amberAccent" />
+                  </div>
+                  <h3 className="font-serif text-lg font-semibold text-textMain mb-1.5">{title}</h3>
+                  <p className="text-textMuted text-xs leading-relaxed">{desc}</p>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
 
         {/* Yapan */}
@@ -100,6 +113,8 @@ export default function About() {
         </div>
 
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { drinks } from '../data/drinks';
 import { kategoriler } from '../data/kategoriler';
+import Footer from '../components/Footer';
 
 const ALKOL_ETIKET = { hafif: 'Hafif (%0-15)', orta: 'Orta (%15-30)', sert: 'Sert (%30+)' };
 const OLGUNLASMA_ETIKET = { fıçılanmış: 'Fıçılanmış', dinlendirilmemiş: 'Dinlendirilmemiş', karışım: 'Karışım' };
@@ -15,7 +16,7 @@ function AnimatedCard({ drink, index, isReversed, onClick }) {
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.unobserve(el); } },
       { threshold: 0.1 }
     );
     observer.observe(el);
@@ -26,6 +27,10 @@ function AnimatedCard({ drink, index, isReversed, onClick }) {
     <div
       ref={ref}
       onClick={onClick}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }}
+      role="button"
+      tabIndex={0}
+      aria-label={drink.name}
       className={`group flex flex-col md:flex-row gap-8 lg:gap-16 items-center cursor-pointer
         ${isReversed ? 'md:flex-row-reverse' : ''}
         transition-all duration-700 ease-out
@@ -41,8 +46,8 @@ function AnimatedCard({ drink, index, isReversed, onClick }) {
       </div>
       <div className="w-full md:w-7/12 flex flex-col justify-center px-4 md:px-0">
         <div className="flex flex-wrap gap-2 mb-6">
-          {[drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map(t => (
-            <span key={t} className="text-xs uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
+          {[drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map((t, idx) => (
+            <span key={`${t}-${idx}`} className="text-xs uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
               {t}
             </span>
           ))}
@@ -61,6 +66,29 @@ function AnimatedCard({ drink, index, isReversed, onClick }) {
   );
 }
 
+const PillGrup = ({ baslik, secili, setSecili, secenekler, etiketler = {} }) => (
+  <div className="flex flex-wrap items-center gap-2">
+    <span className="text-xs uppercase tracking-widest text-textMuted font-semibold w-full mb-1">{baslik}</span>
+    <button
+      onClick={() => setSecili('hepsi')}
+      className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200
+        ${secili === 'hepsi' ? 'bg-amberAccent text-darkBg border-amberAccent' : 'border-[#3a2c1e] text-textMuted hover:border-amberAccent hover:text-textMain'}`}
+    >
+      Hepsi
+    </button>
+    {secenekler.map(s => (
+      <button
+        key={s}
+        onClick={() => setSecili(s)}
+        className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200
+          ${secili === s ? 'bg-amberAccent text-darkBg border-amberAccent' : 'border-[#3a2c1e] text-textMuted hover:border-amberAccent hover:text-textMain'}`}
+      >
+        {etiketler[s] || s}
+      </button>
+    ))}
+  </div>
+);
+
 export default function KategoriSayfasi() {
   const { ana_tur } = useParams();
   const navigate = useNavigate();
@@ -71,6 +99,19 @@ export default function KategoriSayfasi() {
   const [altTur, setAltTur] = useState('hepsi');
   const [alkolSeviye, setAlkolSeviye] = useState('hepsi');
   const [olgunlasma, setOlgunlasma] = useState('hepsi');
+  const scrollRef = useRef(null);
+
+  // Kategori değiştiğinde filtreleri sıfırla ve sayfayı en üste kaydır
+  useEffect(() => {
+    setAltTur('hepsi');
+    setAlkolSeviye('hepsi');
+    setOlgunlasma('hepsi');
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+  }, [ana_tur]);
+
+  useEffect(() => {
+    if (kategori) document.title = `${kategori.name} | Kadeh`;
+  }, [kategori]);
 
   const mevcutOlgunlasma = [...new Set(tumDrinks.map(d => d.olgunlasma).filter(Boolean))];
   const mevcutAlkol = [...new Set(tumDrinks.map(d => d.alkol_seviye).filter(Boolean))];
@@ -90,31 +131,9 @@ export default function KategoriSayfasi() {
     );
   }
 
-  const PillGrup = ({ baslik, secili, setSecili, secenekler, etiketler = {} }) => (
-    <div className="flex flex-wrap items-center gap-2">
-      <span className="text-xs uppercase tracking-widest text-textMuted font-semibold w-full mb-1">{baslik}</span>
-      <button
-        onClick={() => setSecili('hepsi')}
-        className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200
-          ${secili === 'hepsi' ? 'bg-amberAccent text-darkBg border-amberAccent' : 'border-[#3a2c1e] text-textMuted hover:border-amberAccent hover:text-textMain'}`}
-      >
-        Hepsi
-      </button>
-      {secenekler.map(s => (
-        <button
-          key={s}
-          onClick={() => setSecili(s)}
-          className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all duration-200
-            ${secili === s ? 'bg-amberAccent text-darkBg border-amberAccent' : 'border-[#3a2c1e] text-textMuted hover:border-amberAccent hover:text-textMain'}`}
-        >
-          {etiketler[s] || s}
-        </button>
-      ))}
-    </div>
-  );
 
   return (
-    <div className="flex-1 overflow-y-auto custom-scrollbar">
+    <div ref={scrollRef} className="flex-1 overflow-y-auto custom-scrollbar">
 
       {/* Üst bar */}
       <div className="sticky top-0 z-10 bg-darkBg border-b border-[#2a2015] px-4 lg:px-8 py-3 flex items-center gap-4">
@@ -196,6 +215,8 @@ export default function KategoriSayfasi() {
         </div>
 
       </div>
+
+      <Footer />
     </div>
   );
 }

@@ -25,3 +25,39 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #c8860a; 
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-tab-fade {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-in {
+  animation: slideIn 0.2s ease-out forwards;
+}
+
+*:focus-visible {
+  outline: 2px solid #c8860a;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

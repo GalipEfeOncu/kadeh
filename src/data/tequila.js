@@ -555,5 +555,82 @@ export const tequila = [
     baslangic_onerileri: ['Espolòn Blanco'], orta_seviye: ['Espolòn Reposado'], premium: ['Espolòn Añejo X'],
     fiyat_araligi: '800 - 1100', nereden_alinir: 'Tekeller ve iyi barlar.',
     pop_kultur: 'Sanatsal şişesiyle koleksiyonerlerin de sevdiği bir ürün.', yanlis_bilinenler: 'Şişe tasarımından dolayı çok acı veya sert olduğu sanılır, aslında inanılmaz yumuşaktır.', sozler: '"A tribute to Mexican culture."'
+  },
+  {
+    id: 'don-julio-anejo',
+    name: 'Don Julio Añejo',
+    emoji: '🥃',
+    color: '#b8860b',
+    aliases: ['Don Julio Añejo', 'DJ Añejo'],
+    origin: 'Meksika, Jalisco',
+    ana_tur: 'tequila',
+    alt_tur: 'anejo',
+    gorunum: 'amber',
+    olgunlasma: 'fıçılanmış',
+    aroma: ['karamel', 'vanilya', 'meşe', 'pişmiş agav', 'çikolata'],
+    alkol_seviye: 'sert',
+    lore_short: 'Añejo kategorisinin taç mücevheri. 18 ay Amerikan beyaz meşesinde dinlenerek kazandığı derin kehribar rengi, karamel ve bitter çikolata notalarıyla tekila dünyasının en zarif ifadelerinden biri. Viski ve konyak severler için mükemmel bir geçiş kapısı.',
+    lore_full: [
+      {
+        baslik: 'Köken',
+        metin: `Don Julio González, 1942 yılında henüz 17 yaşındayken Jalisco'nun yüksek platolarında kendi damıtımevini kurdu. O zamana kadar agav bitkilerini birbirine çok yakın diken geleneği yıkarak, bitkileri daha aralıklı dikti. Bu basit değişiklik, her bitkinin daha fazla güneş, su ve besin almasını sağladı; sonuçta daha zengin, daha şekerli agav kalpleri (piña) elde edildi.\n\nAñejo (\"yaşlı, yıllanmış\" anlamına gelir) kategorisi, tekilanın en az 1 yıl meşe fıçıda bekletilmesiyle oluşur. Don Julio Añejo bu süreyi 18 aya çıkararak añejo sınıfının üst limitine yaklaşır. Bu ekstra süre, agavın taze bitkisel karakterini kaybetmeden meşeden gelen vanilya, karamel ve odunsu notaların derinleşmesini sağlar.`
+      },
+      {
+        baslik: 'Yayılma',
+        metin: `Don Julio markası, tekilayı \"ucuz parti içkisi\" kategorisinden çıkarıp \"premium sipping spirit\" (yudumlanacak lüks içki) kategorisine taşıyan markalar arasında öncü rol oynamıştır. Añejo versiyonu bu dönüşümün en güçlü kanıtıdır: Tuz ve limona gerek duymadan, viski ya da konyak gibi yavaşça yudumlanması gereken bir tekila.\n\nDiageo'nun markayı satın almasının ardından Don Julio'nun küresel dağıtım ağı genişledi. Bugün dünyanın en prestijli barlarından Michelin yıldızlı restoranlara kadar her yerde menülerde yer almaktadır. Özellikle ABD pazarında Don Julio Añejo, "call drink" (müşterinin ismen talep ettiği içki) olarak viski markalarıyla yarışabilecek bir prestije sahiptir.`
+      },
+      {
+        baslik: 'Kültürel Etki',
+        metin: `Añejo tekila kategorisi, Meksika'nın dünyaya sunduğu en sofistike içki deneyimlerinden biridir. Don Julio Añejo, bu kategorinin en bilinen temsilcisi olarak tekilanın \"ciddi bir yudumlanacak içki\" olduğunu kanıtlayan şişedir.\n\nViski ve konyak dünyasından gelen içiciler için Don Julio Añejo sıklıkla bir keşif anıdır: "Tekila böyle bir şey miymiş?" tepkisi, bu şişeyle tanışan çoğu insanın ortak deneyimidir. Meşeden gelen vanilya ve karamel notaları tanıdık gelirken, agavın bitkisel ve hafif tatlı karakteri yeni bir boyut ekler.`
+      },
+      {
+        baslik: 'Modern Dönem',
+        metin: `Don Julio ailesi bugün geniş bir portföy sunmaktadır: Blanco, Reposado, Añejo, 70. Yıl Cristalino ve efsanevi 1942. Her biri farklı bir damak zevkine ve anına hitap eder. Ancak Añejo, sofistike yudumlamanın en doğrudan ifadesi olarak özel bir yere sahiptir.\n\nSon yıllarda \"Cristalino\" trendi (añejo tekilaların filtrelenerek renginin açıklaştırılması) yükselmiştir. Ancak geleneksel añejo severler, fıçının kazandırdığı kehribar rengi ve tam yapıyı tercih etmeye devam etmektedir. Don Julio Añejo, bu geleneksel anlayışın en güçlü temsilcisidir.`
+      },
+      {
+        baslik: 'Türkiye ile İlişkisi',
+        metin: `Türkiye'de tekila algısı büyük ölçüde shot kültürüne dayanır. Don Julio Añejo, bu algıyı değiştiren en önemli şişelerden biridir. Premium restoranlarda ve kokteyl barlarında sek olarak sunulan Añejo, Türk tüketicisine tekilanın yudumlanabilir bir dünya olduğunu göstermektedir.\n\nViski kültürünün güçlü olduğu Türkiye'de, Don Julio Añejo "viski gibi ama farklı" diyerek yeni bir kategori keşfetmek isteyen içicilerin radarındadır. İş yemeklerinde, özel davetlerde ve gurme deneyimlerinde giderek daha fazla tercih edilmektedir.`
+      }
+    ],
+    hammadde: '%100 Mavi Weber Agavı (Jalisco Los Altos bölgesi).',
+    uretim_sureci: 'Agav kalpleri (piña) geleneksel taş fırınlarda (mampostería) 72 saat yavaş pişirilir. Çift damıtma sonrası fıçıya alınır.',
+    dinlendirme: 'Amerikan beyaz meşe (ex-bourbon) fıçılarda 18 ay.',
+    renk: 'Derin kehribar, koyu altın.',
+    koku: 'Karamel, vanilya, pişmiş agav, bitter çikolata, kuru meyveler ve hafif tarçın.',
+    tat: 'Zengin ve katmanlı. Karamel ve butterscotch girişi, ardından meşe vanilyası, bitter çikolata ve olgun agav tatlılığı. Baharatlı notalar arka planda dans eder.',
+    finish: 'Uzun, sıcak ve zarif. Meşe, karamel ve hafif karabiber son notada kalıcı.',
+    vucut: 'Full body',
+    rakon: 'sek',
+    sek_detay: {
+      kadeh: 'Snifter, Glencairn veya Rock glass',
+      sicaklik: 'Oda sıcaklığı',
+      miktar: '40 ml',
+      hazirlik: 'Tuz ve limona kesinlikle gerek yoktur. Viski veya konyak yudumlar gibi, kadehi hafifçe döndürerek aromaları açın ve yavaşça yudumlanın. İsteğe bağlı olarak tek büyük buz küresiyle servis edilebilir.'
+    },
+    mix_detay: [
+      {
+        isim: 'Añejo Old Fashioned',
+        malzemeler: ['50 ml Don Julio Añejo', '1 bar kaşığı Agav Şurubu', '2 dash Angostura Bitters', 'Portakal kabuğu'],
+        hazirlanis: 'Rock bardakta agav şurubu ve bitters\'ı karıştırın. Büyük buz küresi ekleyin, ardından Don Julio Añejo\'yu dökün. Portakal kabuğunu sıkarak yağlarını açığa çıkarın ve süs olarak bırakın.',
+        neden: 'Añejo tekilanın meşe ve karamel notaları, Old Fashioned\'ın minimalist yapısında kusursuz bir şekilde parlar. Bourbon versiyonuna mükemmel bir Meksika alternatifi.',
+        ortam: 'Şık bir lounge, akşam yemeği sonrası, sessiz bir kutlama.'
+      }
+    ],
+    yiyecek: 'Bitter çikolata, puro, karamelize ördek, mole soslu yemekler, olgun peynirler, fırınlanmış armut tatlısı.',
+    muzik_his: 'Latin caz, akustik gitar, lounge, derin ve zarif melodiler.',
+    mevsim: 'Sonbahar ve Kış',
+    abv_range: '38 - 40',
+    standart_porsiyon: '40',
+    kafa_dozu: { hafif: '1-2 kadeh', ideal: '3 kadeh', limit_ustu: '4+ kadeh', ertesi_gun: 2 },
+    etki_hizi: 'Orta (15-20 dk)',
+    metabolizma: 'Orta',
+    baslangic_onerileri: ['Don Julio Blanco'],
+    orta_seviye: ['Don Julio Reposado'],
+    premium: ['Don Julio 1942', 'Don Julio Añejo'],
+    fiyat_araligi: '3500 - 5000',
+    nereden_alinir: 'Lüks tekel butikleri, premium barlar, duty free.',
+    pop_kultur: 'Viski ve konyak dünyasından gelen içicilerin "tekila da böyle bir şeymiş" dediği keşif anının en büyük sorumlusu.',
+    yanlis_bilinenler: 'Añejo tekilanın çok sert ve yakıcı olduğu sanılır; tam tersine, 18 aylık fıçı dinlendirmesi tekila\'nın en yumuşak ve en zarif halini ortaya çıkarır.',
+    sozler: '"The age of perfection."'
   }
 ];

@@ -756,5 +756,87 @@ export const sarap = [
     pop_kultur: 'Vidalı kapak (screwcap) kullanımını dünyaya kabul ettiren şaraptır. Mantar açacağı aramadan, "çıt" diye açılıp içilen ferahlığın sembolüdür.',
     yanlis_bilinenler: 'Tüm Sauvignon Blanc\'ların aynı koktuğu sanılır; Loire (Sancerre) versiyonları daha çakmak taşı ve mineral odaklıyken, Marlborough versiyonları tropikal meyve patlamasıdır.',
     sozler: '"Kadehteki okyanus esintisi."'
+  },
+  {
+    id: 'kavaklidere-lal',
+    name: 'Kavaklıdere Lal',
+    emoji: '🍷',
+    color: '#e8849a',
+    aliases: ['Lal', 'Lal Roze'],
+    origin: 'Türkiye, Ankara/Kapadokya',
+    ana_tur: 'şarap',
+    alt_tur: 'roze',
+    gorunum: 'berrak',
+    olgunlasma: 'dinlendirilmemiş',
+    aroma: ['çilek', 'nar', 'çiçeksi', 'narenciye'],
+    alkol_seviye: 'hafif',
+    lore_short: `Türkiye'nin en bilinen ve en sevilen roze şarabı. "Lal" kelimesi Farsçada "kırmızımsı, yakut renkli" demektir. Kavaklıdere'nin on yıllardır ürettiği bu roze, yaz sofralarının, sahil akşamlarının ve hafif mezelerin değişmez yol arkadaşıdır.`,
+    lore_full: [
+      {
+        baslik: 'Köken',
+        metin: `Kavaklıdere, Türkiye'nin en eski ve en köklü şarap üreticilerinden biridir. 1929 yılında Ankara'da kurulan şirket, cumhuriyet tarihinin neredeyse tamamına tanıklık etmiştir. "Lal" markası, Kavaklıdere'nin roze portföyünün amiral gemisidir ve yıllardır Türk tüketicisinin "roze" dediğinde aklına gelen ilk isimdir.\n\nLal, genellikle Çalkarası, Kalecik Karası ve Öküzgözü gibi yerli kırmızı üzümlerden kısa süreli kabuğa temas (saignée veya presüraj) yöntemiyle üretilir. Üzüm kabukları şıraya yalnızca birkaç saat temas ettirilerek o karakteristik pembe-somon rengi elde edilir. Bu kısa temas süresi, kırmızı şarabın taninlerini almadan yalnızca renk ve hafif meyve aroması aktarır.`
+      },
+      {
+        baslik: 'Yayılma',
+        metin: `Lal, Türkiye'nin dört bir yanında bulunabilen nadir roze şaraplardan biridir. Marketlerden restoranlara, sahil kasabalarındaki balık lokantalarından büyükşehirlerin şarap barlarına kadar her yerde kendine yer bulur. Bu erişilebilirlik, Lal'i hem şarap meraklıları hem de yeni başlayanlar için demokratik bir seçenek yapmaktadır.\n\nYaz aylarında tüketim zirveye çıkar. Ege ve Akdeniz kıyılarındaki restoranlar, menülerinde Lal'i standart olarak bulundurur. "Bir şişe Lal" siparişi, sıcak günlerin en yaygın sofra ritüellerinden biridir.`
+      },
+      {
+        baslik: 'Kültürel Etki',
+        metin: `Türkiye'de roze şarap kültürü, kırmızı ve beyaz şaraba kıyasla daha geç gelişmiştir. Uzun yıllar "roze ciddi şarap değildir" önyargısı hakimdi. Lal, bu önyargıyı kırmada en önemli rol oynayan markalardan biridir. Uygun fiyatı, kolay içimi ve tutarlı kalitesiyle rozeyi sıradan tüketicinin masasına taşımıştır.\n\nÖzellikle kadın tüketiciler arasında Lal, şaraba giriş noktası olmuştur. Ancak bu durum "roze kadın içkisidir" klişesini beslememelidir; iyi bir roze, herkesin masasına yakışır.`
+      },
+      {
+        baslik: 'Modern Dönem',
+        metin: `Günümüzde Kavaklıdere, Lal markası altında farklı serileri de sunmaktadır. Klasik Lal'in yanı sıra daha premium seriler ve hatta köpüklü roze versiyonları da piyasaya sürülmüştür. Bu çeşitlilik, markanın hem giriş seviyesini hem de meraklı tüketiciyi aynı çatı altında tutabildiğini göstermektedir.\n\nDünya genelinde roze tüketiminin patlamasıyla birlikte Türkiye'de de roze ilgisi artmaktadır. Provence stilinin global etkisi, Türk üreticileri de daha açık renkli, daha kuru ve daha mineral roze üretmeye yöneltmiştir. Lal bu trendde referans noktası olmaya devam etmektedir.`
+      },
+      {
+        baslik: `Türkiye ile İlişkisi`,
+        metin: `Lal, Türkiye'de "roze" kelimesinin neredeyse eşanlamlısıdır. Market rafında, balık lokantasında, yazlık evin buzdolabında; nerede roze ararsanız orada Lal'e rastlarsınız. Bu yaygınlık tesadüf değildir: On yıllar boyunca tutarlı üretim, makul fiyatlandırma ve tanıdık etiket, Lal'i bir marka olmaktan çıkarıp bir alışkanlığa dönüştürmüştür.\n\nVe belki en güzel yanı şudur: Lal, şarap konusunda bilgili olmak zorunda hissettirmez. "Güzel bir yaz akşamı, soğuk bir Lal" cümlesi, hiçbir sommelierlik bilgisi gerektirmeden herkesin kurabildiği bir hayaldir.`
+      }
+    ],
+    hammadde: 'Çalkarası, Kalecik Karası ve/veya Öküzgözü üzümleri',
+    uretim_sureci: 'Kısa süreli kabuğa temas (saignée/presüraj) yöntemiyle renk alınır. Düşük sıcaklıkta çelik tankta fermantasyon.',
+    dinlendirme: 'Çelik tankta kısa süre dinlendirilir, tazeyken şişelenir.',
+    renk: 'Açık somon pembesi, parlak ve canlı.',
+    koku: 'Taze çilek, nar çiçeği, karpuz kabuğu ve hafif narenciye. Bahar çiçekleri arka planı.',
+    tat: 'Hafif ve ferahlatıcı. Kırmızı meyve notaları (çilek, ahududu), canlı asidite ve temiz bir yapı. Yarı kuru bir profil.',
+    finish: 'Kısa-orta, temiz ve tazeleyici. Hafif meyve hatırası.',
+    vucut: 'Light body',
+    rakon: 'sek',
+    sek_detay: {
+      kadeh: 'Beyaz şarap kadehi veya universal kadeh',
+      sicaklik: '8-10°C',
+      miktar: '150 ml',
+      hazirlik: 'Servis öncesi en az yarım saat buzdolabında soğutulmalı. Aşırı soğuk meyve aromalarını bastırır, 10°C ideal.'
+    },
+    mix_detay: [
+      {
+        isim: 'Lal Spritz',
+        malzemeler: ['120 ml Kavaklıdere Lal', '30 ml Aperol', '30 ml Soda', 'Buz', 'Portakal dilimi'],
+        hazirlanis: 'Buz dolu kadehin içine Aperol, ardından Lal, en son soda ekleyin. Portakal dilimiyle süsleyin.',
+        neden: `Lal'in hafif meyve karakteri ve canlı asiditesi, Aperol'ün tatlı-acı yapısıyla ferahlatıcı bir yaz aperitifi oluşturur.`,
+        ortam: 'Yaz akşamüstü, sahil, aperitif saati.'
+      }
+    ],
+    yiyecek: 'Deniz ürünleri salatası, ızgara karides, zeytinyağlı enginar, beyaz peynir, kavun-prosciutto, hafif makarnalar.',
+    muzik_his: 'Hafif pop, bossa nova, deniz kenarı akşamı, neşeli ve rahat.',
+    mevsim: 'İlkbahar ve Yaz',
+    abv_range: '11.5 - 13',
+    standart_porsiyon: '150',
+    kafa_dozu: {
+      hafif: '1-2 kadeh',
+      ideal: '2-3 kadeh',
+      limit_ustu: '4+ kadeh',
+      ertesi_gun: 1
+    },
+    etki_hizi: 'Yavaş-orta (30-45 dk)',
+    metabolizma: 'Hızlı',
+    baslangic_onerileri: ['Kavaklıdere Lal'],
+    orta_seviye: ['Kavaklıdere Lal Selection'],
+    premium: ['Vinkara Roze', 'Suvla Roze'],
+    fiyat_araligi: '200 - 600',
+    nereden_alinir: 'Marketler, şarap mağazaları, restoranlar. Türkiye genelinde her yerde.',
+    pop_kultur: `Türkiye'de "roze" kelimesinin eşanlamlısı. Yaz sofralarının ve sahil restoranlarının vazgeçilmez şişesi.`,
+    yanlis_bilinenler: `"Roze ciddi şarap değildir" önyargısı. İyi yapılmış bir roze, hem teknik ustalık hem de üzüm seçimi gerektirir; taze meyveli ve dengeli bir roze üretmek kolay değildir.`,
+    sozler: '"Yazın rengi, kadehte."'
   }
 ];
