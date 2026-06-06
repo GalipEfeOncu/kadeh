@@ -38,20 +38,20 @@ function KategoriKart({ kategori, drinkSayisi, index, onClick }) {
       <div
         className={`bg-[#1a130c] border border-[#2a2015] rounded-2xl overflow-hidden
           hover:border-amberAccent transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between
-          ${isRaki ? 'p-6 sm:p-10 min-h-[220px]' : 'p-6 md:p-8 h-[220px]'}
+          ${isRaki ? 'p-4 sm:p-6 md:p-10 min-h-[160px] md:min-h-[220px]' : 'p-4 md:p-8 h-[180px] md:h-[220px]'}
         `}
       >
         {isRaki ? (
           /* Rakı (Hero Category Card) */
           <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
             {/* Emoji */}
-            <div className="flex-shrink-0 w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-[#0f0a06] border border-[#2a2015] flex items-center justify-center text-4xl md:text-5xl group-hover:border-amberAccent group-hover:scale-105 transition-all duration-300">
+            <div className="flex-shrink-0 w-14 h-14 md:w-28 md:h-28 rounded-2xl bg-[#0f0a06] border border-[#2a2015] flex items-center justify-center text-3xl md:text-5xl group-hover:border-amberAccent group-hover:scale-105 transition-all duration-300">
               {kategori.emoji}
             </div>
 
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-3 mb-3">
-                <h2 className="font-serif font-bold text-3xl md:text-4xl text-textMain group-hover:text-amberAccent transition-colors">
+                <h2 className="font-serif font-bold text-2xl md:text-4xl text-textMain group-hover:text-amberAccent transition-colors">
                   {kategori.name}
                 </h2>
                 {drinkSayisi > 0 && (
@@ -82,11 +82,11 @@ function KategoriKart({ kategori, drinkSayisi, index, onClick }) {
             <div className="flex justify-between items-center w-full">
               <div className="flex items-center gap-3">
                 {/* Emoji */}
-                <div className="w-12 h-12 rounded-xl bg-[#0f0a06] border border-[#2a2015] flex items-center justify-center text-2xl group-hover:border-amberAccent group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-[#0f0a06] border border-[#2a2015] flex items-center justify-center text-xl md:text-2xl group-hover:border-amberAccent group-hover:scale-105 transition-all duration-300 flex-shrink-0">
                   {kategori.emoji}
                 </div>
                 {/* Title */}
-                <h3 className="font-serif font-bold text-lg md:text-xl text-textMain group-hover:text-amberAccent transition-colors leading-tight">
+                <h3 className="font-serif font-bold text-base md:text-xl text-textMain group-hover:text-amberAccent transition-colors leading-tight">
                   {kategori.name}
                 </h3>
               </div>
@@ -163,12 +163,12 @@ export default function Home() {
           className="relative flex flex-col items-center justify-center text-center px-6 min-h-[calc(100vh-64px)] min-h-[calc(100dvh-64px)] snap-start"
         >
           <div className="max-w-5xl mx-auto">
-            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6 text-balance leading-[1.15] md:leading-[1.1]">
+            <h1 className="font-serif text-3xl md:text-7xl font-bold mb-4 md:mb-6 text-balance leading-[1.15] md:leading-[1.1]">
               Bardağa dökülen her şeyin hikayesi,{' '}
               <br className="hidden md:block" />
               <span className="text-amberAccent italic">kadehten kadehe yazıldı.</span>
             </h1>
-            <p className="text-textMuted text-xl md:text-2xl leading-relaxed mt-6 max-w-2xl mx-auto">
+            <p className="text-textMuted text-base md:text-2xl leading-relaxed mt-4 md:mt-6 max-w-2xl mx-auto">
               Süslü barlara ya da sommelier sözlüğüne gerek yok. Ne içtiğin, damağında nasıl bir iz bıraktığı ve o kadehe nasıl kavuştuğun. Hepsi burada, olduğu gibi.
             </p>
           </div>
@@ -181,8 +181,8 @@ export default function Home() {
         </div>
 
         {/* Kategori kartları */}
-        <div className="px-6 lg:px-12 pt-16 pb-32 max-w-5xl mx-auto snap-start">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="px-4 md:px-6 lg:px-12 pt-10 md:pt-16 pb-20 md:pb-32 max-w-5xl mx-auto snap-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
             {kategoriler.map((kategori, index) => (
               <KategoriKart
                 key={kategori.id}

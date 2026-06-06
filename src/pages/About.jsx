@@ -36,7 +36,7 @@ export default function About() {
 
   return (
     <div className="flex-1 overflow-y-auto custom-scrollbar">
-      <div className="max-w-3xl mx-auto px-6 md:px-12 py-16 md:py-24">
+      <div className="max-w-3xl mx-auto px-4 md:px-12 py-10 md:py-24">
 
         {/* Manifesto */}
         <div className="mb-20 md:mb-28">
@@ -44,24 +44,24 @@ export default function About() {
             <Wine className="text-amberAccent w-6 h-6" />
             <span className="text-xs uppercase tracking-widest text-textMuted font-semibold">Hakkında</span>
           </div>
-          <h1 className="font-serif text-4xl md:text-6xl font-bold leading-[1.3] mb-8">
+          <h1 className="font-serif text-2xl md:text-6xl font-bold leading-[1.3] mb-5 md:mb-8">
             Bardağa dökülen her şeyin{' '}
             <span className="text-amberAccent italic">bir hikayesi var.</span>
           </h1>
-          <p className="text-textMuted text-lg md:text-xl leading-relaxed mb-6">
+          <p className="text-textMuted text-sm md:text-xl leading-relaxed mb-4 md:mb-6">
             Kadeh, içkileri anlamak isteyen ama uzman olmak zorunda olmadığını bilen insanlar için yazıldı. Şatafatlı barlara ya da sommelier jargonuna ihtiyaç duymadan, elindeki bardağı biraz daha iyi tanımak için bir yer.
           </p>
-          <p className="text-textMuted text-lg md:text-xl leading-relaxed">
+          <p className="text-textMuted text-sm md:text-xl leading-relaxed">
             Her içki, bir kültürün damıtılmış hali. Rakı'da Akdeniz sofrasının sesi var. Viskide İskoç sisinin kokusu. Bunları bilerek içmek başka bir şey.
           </p>
         </div>
 
         {/* Sütunlar */}
-        <div className="mb-20 md:mb-28 space-y-12">
+        <div className="mb-12 md:mb-28 space-y-8 md:space-y-12">
           <h2 className="font-serif text-2xl md:text-3xl font-bold text-textMain">Ne sunuyoruz</h2>
-          <div className="space-y-10">
+          <div className="space-y-7 md:space-y-10">
             {pillars.map(({ icon: Icon, baslik, aciklama }) => (
-              <div key={baslik} className="flex gap-6 items-start">
+              <div key={baslik} className="flex gap-4 md:gap-6 items-start">
                 <div className="w-10 h-10 rounded-xl bg-[#1a130c] border border-[#2a2015] flex items-center justify-center flex-shrink-0 mt-1">
                   <Icon size={18} className="text-amberAccent" />
                 </div>
@@ -93,9 +93,9 @@ export default function About() {
         </div>
 
         {/* Yapan */}
-        <div className="mb-20 md:mb-28 border-t border-[#2a2015] pt-12">
+        <div className="mb-12 md:mb-28 border-t border-[#2a2015] pt-10 md:pt-12">
           <span className="text-xs uppercase tracking-widest text-textMuted font-semibold block mb-6">Yapan</span>
-          <p className="font-serif text-2xl md:text-3xl font-bold text-textMain mb-3">Galip Efe Öncü</p>
+          <p className="font-serif text-xl md:text-3xl font-bold text-textMain mb-3">Galip Efe Öncü</p>
           <p className="text-textMuted leading-relaxed">
             İçkilerin tadından çok hikayelerine meraklı biri. Bu site, o merakın birikiminden çıktı.
           </p>

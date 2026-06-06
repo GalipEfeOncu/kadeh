@@ -23,47 +23,90 @@ function AnimatedCard({ drink, index, isReversed, onClick }) {
     return () => observer.disconnect();
   }, []);
 
+  const sharedWrapperProps = {
+    onClick,
+    onKeyDown: (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } },
+    role: 'button',
+    tabIndex: 0,
+    'aria-label': drink.name,
+  };
+
+  const animClass = `transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-14'}`;
+
   return (
-    <div
-      ref={ref}
-      onClick={onClick}
-      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } }}
-      role="button"
-      tabIndex={0}
-      aria-label={drink.name}
-      className={`group flex flex-col md:flex-row gap-8 lg:gap-16 items-center cursor-pointer
-        ${isReversed ? 'md:flex-row-reverse' : ''}
-        transition-all duration-700 ease-out
-        ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-14'}
-      `}
-      style={{ transitionDelay: `${Math.min(index * 90, 270)}ms` }}
-    >
+    <div ref={ref} className={animClass} style={{ transitionDelay: `${Math.min(index * 90, 270)}ms` }}>
+      {/* ── MOBİL: Kompakt yatay kart (md'de gizli) ── */}
       <div
-        className="w-full md:w-5/12 aspect-[4/3] bg-[#1a130c] rounded-3xl flex items-center justify-center text-8xl md:text-9xl border border-[#2a2015] transition-all duration-500 group-hover:border-amberAccent group-hover:scale-[1.02] shadow-xl"
-        style={{ boxShadow: `0 20px 60px ${drink.color}10` }}
+        {...sharedWrapperProps}
+        className="md:hidden group cursor-pointer"
       >
-        <span className="group-hover:scale-110 transition-transform duration-500">{drink.emoji}</span>
-      </div>
-      <div className="w-full md:w-7/12 flex flex-col justify-center px-4 md:px-0">
-        <div className="flex flex-wrap gap-2 mb-6">
-          {[drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map((t, idx) => (
-            <span key={`${t}-${idx}`} className="text-xs uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
-              {t}
-            </span>
-          ))}
+        <div className="flex items-center gap-4 bg-[#1a130c] border border-[#2a2015] rounded-2xl p-4 hover:border-amberAccent transition-all duration-300 active:scale-[0.98]">
+          {/* Emoji kutusu */}
+          <div
+            className="w-14 h-14 flex-shrink-0 rounded-xl bg-[#0f0a06] border border-[#2a2015] flex items-center justify-center text-2xl group-hover:border-amberAccent transition-colors duration-300"
+            style={{ boxShadow: `0 8px 24px ${drink.color}18` }}
+          >
+            {drink.emoji}
+          </div>
+
+          {/* İçerik */}
+          <div className="flex-1 min-w-0">
+            {/* Etiketler — sadece ilk 2 */}
+            <div className="flex flex-wrap gap-1 mb-1">
+              {[drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).slice(0, 2).map((t, idx) => (
+                <span key={`${t}-${idx}`} className="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#0f0a06]">
+                  {t}
+                </span>
+              ))}
+            </div>
+            <h2 className="font-serif text-base font-bold text-textMain group-hover:text-amberAccent transition-colors duration-300 leading-tight truncate">
+              {drink.name}
+            </h2>
+            <p className="text-textMuted text-xs leading-relaxed mt-0.5 line-clamp-2">
+              {drink.lore_short}
+            </p>
+          </div>
+
+          {/* Ok */}
+          <div className="flex-shrink-0 text-amberAccent text-lg transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </div>
         </div>
-        <h2 className="font-serif text-5xl md:text-7xl font-bold text-textMain mb-6 group-hover:text-amberAccent transition-colors duration-300">
-          {drink.name}
-        </h2>
-        <p className="text-textMuted text-lg md:text-2xl leading-relaxed mb-8 max-w-2xl">
-          {drink.lore_short}
-        </p>
-        <span className="inline-flex items-center gap-3 text-sm uppercase tracking-widest font-semibold text-textMain group-hover:text-amberAccent transition-colors">
-          Hikayeyi Oku <span className="text-amberAccent text-xl transition-transform group-hover:translate-x-2">→</span>
-        </span>
+      </div>
+
+      {/* ── DESKTOP: Orijinal büyük layout (mobile'da gizli) ── */}
+      <div
+        {...sharedWrapperProps}
+        className={`hidden md:flex flex-row gap-8 lg:gap-16 items-center cursor-pointer group ${isReversed ? 'flex-row-reverse' : ''}`}
+      >
+        <div
+          className="w-5/12 aspect-[4/3] bg-[#1a130c] rounded-3xl flex items-center justify-center text-9xl border border-[#2a2015] transition-all duration-500 group-hover:border-amberAccent group-hover:scale-[1.02] shadow-xl"
+          style={{ boxShadow: `0 20px 60px ${drink.color}10` }}
+        >
+          <span className="group-hover:scale-110 transition-transform duration-500">{drink.emoji}</span>
+        </div>
+        <div className="w-7/12 flex flex-col justify-center">
+          <div className="flex flex-wrap gap-2 mb-6">
+            {[drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map((t, idx) => (
+              <span key={`${t}-${idx}`} className="text-xs uppercase tracking-wider font-semibold px-4 py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
+                {t}
+              </span>
+            ))}
+          </div>
+          <h2 className="font-serif text-7xl font-bold text-textMain mb-6 group-hover:text-amberAccent transition-colors duration-300">
+            {drink.name}
+          </h2>
+          <p className="text-textMuted text-2xl leading-relaxed mb-8 max-w-2xl">
+            {drink.lore_short}
+          </p>
+          <span className="inline-flex items-center gap-3 text-sm uppercase tracking-widest font-semibold text-textMain group-hover:text-amberAccent transition-colors">
+            Hikayeyi Oku <span className="text-amberAccent text-xl transition-transform group-hover:translate-x-2">→</span>
+          </span>
+        </div>
       </div>
     </div>
   );
+
 }
 
 const PillGrup = ({ baslik, secili, setSecili, secenekler, etiketler = {} }) => (
@@ -151,23 +194,23 @@ export default function KategoriSayfasi() {
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
 
         {/* Kategori başlığı */}
-        <div className="py-14 md:py-20 border-b border-[#2a2015] mb-12">
-          <div className="flex items-start gap-6 md:gap-10">
+        <div className="py-8 md:py-20 border-b border-[#2a2015] mb-8 md:mb-12">
+          <div className="flex items-start gap-4 md:gap-10">
             <div
-              className="w-20 h-20 md:w-28 md:h-28 flex-shrink-0 rounded-2xl bg-[#1a130c] border border-[#2a2015] flex items-center justify-center text-4xl md:text-5xl"
+              className="w-14 h-14 md:w-28 md:h-28 flex-shrink-0 rounded-2xl bg-[#1a130c] border border-[#2a2015] flex items-center justify-center text-3xl md:text-5xl"
               style={{ boxShadow: `0 10px 40px ${kategori.renk}15` }}
             >
               {kategori.emoji}
             </div>
             <div>
-              <h1 className="font-serif text-4xl md:text-6xl font-bold mb-4">{kategori.name}</h1>
-              <p className="text-textMuted text-lg md:text-xl leading-relaxed max-w-2xl">{kategori.aciklama}</p>
+              <h1 className="font-serif text-2xl md:text-6xl font-bold mb-2 md:mb-4">{kategori.name}</h1>
+              <p className="text-textMuted text-sm md:text-xl leading-relaxed max-w-2xl">{kategori.aciklama}</p>
             </div>
           </div>
         </div>
 
         {/* Filtreler */}
-        <div className="mb-12 flex flex-col gap-5 p-6 bg-[#1a130c] border border-[#2a2015] rounded-2xl">
+        <div className="mb-8 md:mb-12 flex flex-col gap-3 md:gap-5 p-3 md:p-6 bg-[#1a130c] border border-[#2a2015] rounded-2xl">
           <PillGrup
             baslik="Alt Tür"
             secili={altTur}
@@ -196,7 +239,7 @@ export default function KategoriSayfasi() {
         </div>
 
         {/* İçki listesi */}
-        <div className="flex flex-col gap-24 md:gap-32 pb-32">
+        <div className="flex flex-col gap-3 md:gap-32 pb-20 md:pb-32">
           {filtrelenmis.length > 0 ? (
             filtrelenmis.map((drink, index) => (
               <AnimatedCard

@@ -34,18 +34,18 @@ export default function DrinkDetail({ drink }) {
   ];
 
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 py-8 md:py-12 lg:py-16 max-w-6xl mx-auto">
-      <div className="flex flex-row gap-5 md:gap-10 items-center md:items-start mb-10 md:mb-16">
+    <div className="w-full px-3 md:px-8 lg:px-16 py-4 md:py-12 lg:py-16 max-w-6xl mx-auto">
+      <div className="flex flex-row gap-3 md:gap-10 items-center md:items-start mb-5 md:mb-16">
         <div
-          className="w-20 h-20 md:w-36 md:h-36 lg:w-48 lg:h-48 flex-shrink-0 rounded-2xl md:rounded-3xl flex items-center justify-center text-4xl md:text-6xl lg:text-8xl border border-[#2a2015] bg-[#1a130c] shadow-xl"
+          className="w-14 h-14 md:w-36 md:h-36 lg:w-48 lg:h-48 flex-shrink-0 rounded-xl md:rounded-3xl flex items-center justify-center text-2xl md:text-6xl lg:text-8xl border border-[#2a2015] bg-[#1a130c] shadow-xl"
         >
           {drink.emoji}
         </div>
         <div className="flex-1 min-w-0">
-          <h1 className="font-serif text-3xl md:text-5xl lg:text-7xl font-bold mb-3 md:mb-6">{drink.name}</h1>
-          <div className="flex flex-wrap gap-2 md:gap-3 mb-3 md:mb-8">
+          <h1 className="font-serif text-xl md:text-5xl lg:text-7xl font-bold mb-2 md:mb-6">{drink.name}</h1>
+          <div className="flex flex-wrap gap-1.5 md:gap-3 mb-2 md:mb-8">
             {[drink.ana_tur, drink.alt_tur, ...(drink.aroma || [])].filter(Boolean).map((t, idx) => (
-              <span key={`tag-${idx}`} className="text-xs md:text-sm uppercase tracking-wider font-semibold px-3 md:px-4 py-1 md:py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
+              <span key={`tag-${idx}`} className="text-xs uppercase tracking-wider font-semibold px-2 py-0.5 md:px-4 md:py-1.5 rounded-full border border-[#3a2c1e] text-amberAccent bg-[#1a130c]">
                 {t}
               </span>
             ))}
@@ -59,15 +59,15 @@ export default function DrinkDetail({ drink }) {
         {drink.lore_short}
       </p>
 
-      <div className="relative mb-8 md:mb-12">
-        <div className="flex overflow-x-auto gap-1 md:gap-2 lg:gap-4 border-b border-[#2a2015] pb-px custom-scrollbar">
+      <div className="relative mb-5 md:mb-12">
+        <div className="flex overflow-x-auto gap-0.5 md:gap-2 lg:gap-4 border-b border-[#2a2015] pb-px custom-scrollbar">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-3 md:px-5 py-3 md:py-4 text-xs md:text-sm lg:text-base font-medium whitespace-nowrap border-b-2 transition-colors ${
+                className={`flex items-center gap-1.5 md:gap-2 px-2.5 md:px-5 py-2 md:py-4 text-xs md:text-sm lg:text-base font-medium whitespace-nowrap border-b-2 transition-colors ${
                   activeTab === tab.id
                     ? 'border-amberAccent text-amberAccent bg-[#2a2015]/30 rounded-t-lg'
                     : 'border-transparent text-textMuted hover:text-textMain hover:bg-[#1a130c] rounded-t-lg'
@@ -82,16 +82,16 @@ export default function DrinkDetail({ drink }) {
         <div className="absolute right-0 top-0 bottom-px w-8 bg-gradient-to-l from-[#1a130c] to-transparent pointer-events-none md:hidden" />
       </div>
 
-      <div className="bg-[#1a130c] border border-[#2a2015] rounded-2xl md:rounded-3xl p-5 md:p-8 lg:p-12 min-h-[400px] shadow-xl">
+      <div className="bg-[#1a130c] border border-[#2a2015] rounded-2xl md:rounded-3xl p-3 md:p-8 lg:p-12 min-h-[400px] shadow-xl">
         {activeTab === 'lore' && (
           <div className="animate-tab-fade">
             {/* Özet */}
-            <div className="mb-12 pb-12 border-b border-[#2a2015]">
+            <div className="mb-8 md:mb-12 pb-8 md:pb-12 border-b border-[#2a2015]">
               <span className="text-xs uppercase tracking-widest text-amberAccent font-semibold mb-5 block">Özet</span>
-              <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed text-textMain max-w-3xl">
+              <p className="font-serif text-lg md:text-3xl lg:text-4xl leading-relaxed text-textMain max-w-3xl">
                 {drink.lore_short}
               </p>
-              <div className="flex flex-wrap gap-8 mt-8">
+              <div className="flex flex-wrap gap-5 md:gap-8 mt-5 md:mt-8">
                 <div>
                   <span className="text-xs text-textMuted block mb-1 uppercase tracking-widest">Köken</span>
                   <span className="text-base font-medium">{drink.origin}</span>
@@ -109,16 +109,16 @@ export default function DrinkDetail({ drink }) {
             {Array.isArray(drink.lore_full) && drink.lore_full.length > 0 && (
               <div>
                 <span className="text-xs uppercase tracking-widest text-amberAccent font-semibold mb-10 block">Derin Dalış</span>
-                <div className="space-y-12">
+                <div className="space-y-8 md:space-y-12">
                   {drink.lore_full.map((bolum, idx) => (
                     <div key={idx}>
-                      <h4 className="font-serif text-xl lg:text-2xl text-textMain mb-5 flex items-center gap-4">
+                      <h4 className="font-serif text-base md:text-2xl text-textMain mb-3 md:mb-5 flex items-center gap-3 md:gap-4">
                         <span className="w-8 h-px bg-amberAccent inline-block flex-shrink-0" />
                         {bolum.baslik}
                       </h4>
-                      <div className="space-y-5 pl-12">
+                      <div className="space-y-3 md:space-y-5 pl-5 md:pl-12">
                         {bolum.metin.split('\n\n').map((paragraf, pIdx) => (
-                          <p key={pIdx} className="text-textMuted leading-loose text-base lg:text-lg">
+                          <p key={pIdx} className="text-textMuted leading-loose text-sm md:text-base lg:text-lg">
                             {paragraf}
                           </p>
                         ))}
@@ -132,27 +132,27 @@ export default function DrinkDetail({ drink }) {
         )}
 
         {activeTab === 'uretim' && (
-          <div className="animate-tab-fade space-y-12">
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
-              <div className="space-y-10">
+          <div className="animate-tab-fade space-y-8 md:space-y-12">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-12">
+              <div className="space-y-6 md:space-y-10">
                 <div>
-                  <h4 className="font-serif text-2xl text-amberAccent mb-3">Hammadde</h4>
-                  <p className="text-textMain text-lg leading-relaxed">{drink.hammadde}</p>
+                  <h4 className="font-serif text-lg md:text-2xl text-amberAccent mb-2 md:mb-3">Hammadde</h4>
+                  <p className="text-textMain text-sm md:text-lg leading-relaxed">{drink.hammadde}</p>
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl text-amberAccent mb-3">Üretim Süreci</h4>
-                  <p className="text-textMain text-lg leading-relaxed">{drink.uretim_sureci}</p>
+                  <h4 className="font-serif text-lg md:text-2xl text-amberAccent mb-2 md:mb-3">Üretim Süreci</h4>
+                  <p className="text-textMain text-sm md:text-lg leading-relaxed">{drink.uretim_sureci}</p>
                 </div>
                 <div>
-                  <h4 className="font-serif text-2xl text-amberAccent mb-3">Dinlendirme</h4>
-                  <p className="text-textMain text-lg leading-relaxed">{drink.dinlendirme}</p>
+                  <h4 className="font-serif text-lg md:text-2xl text-amberAccent mb-2 md:mb-3">Dinlendirme</h4>
+                  <p className="text-textMain text-sm md:text-lg leading-relaxed">{drink.dinlendirme}</p>
                 </div>
               </div>
 
               {/* Tadım Profili */}
-              <div className="bg-[#0f0a06] p-8 lg:p-10 rounded-2xl border border-[#2a2015]">
-                <h4 className="font-serif text-3xl text-amberAccent mb-8 border-b border-[#2a2015] pb-4">Tadım Profili</h4>
-                <div className="space-y-6 text-lg">
+              <div className="bg-[#0f0a06] p-4 md:p-10 rounded-2xl border border-[#2a2015]">
+                <h4 className="font-serif text-xl md:text-3xl text-amberAccent mb-4 md:mb-8 border-b border-[#2a2015] pb-3 md:pb-4">Tadım Profili</h4>
+                <div className="space-y-3 md:space-y-6 text-sm md:text-lg">
                   {[
                     { label: 'Renk', val: drink.renk },
                     { label: 'Koku', val: drink.koku },
@@ -175,42 +175,42 @@ export default function DrinkDetail({ drink }) {
           <div className="animate-tab-fade space-y-12">
             {drink.sek_detay && drink.sek_detay.kadeh && (
               <div className="mb-12">
-                <h3 className="font-serif text-3xl text-amberAccent mb-6">Sek İçim</h3>
-                <div className="bg-[#0f0a06] p-8 rounded-2xl border border-[#2a2015] grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div><span className="text-textMuted block text-sm uppercase tracking-widest mb-2">Kadeh</span><span className="text-lg">{drink.sek_detay.kadeh}</span></div>
-                  <div><span className="text-textMuted block text-sm uppercase tracking-widest mb-2">Sıcaklık</span><span className="text-lg">{drink.sek_detay.sicaklik || '-'}</span></div>
-                  <div><span className="text-textMuted block text-sm uppercase tracking-widest mb-2">Miktar</span><span className="text-lg">{drink.sek_detay.miktar || '-'}</span></div>
-                  <div className="md:col-span-3 pt-4 border-t border-[#2a2015]"><span className="text-textMuted block text-sm uppercase tracking-widest mb-2">Hazırlık</span><span className="text-lg leading-relaxed">{drink.sek_detay.hazirlik || '-'}</span></div>
+                <h3 className="font-serif text-xl md:text-3xl text-amberAccent mb-4 md:mb-6">Sek İçim</h3>
+                <div className="bg-[#0f0a06] p-4 md:p-8 rounded-2xl border border-[#2a2015] grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+                  <div><span className="text-textMuted block text-xs md:text-sm uppercase tracking-widest mb-1 md:mb-2">Kadeh</span><span className="text-sm md:text-lg">{drink.sek_detay.kadeh}</span></div>
+                  <div><span className="text-textMuted block text-xs md:text-sm uppercase tracking-widest mb-1 md:mb-2">Sıcaklık</span><span className="text-sm md:text-lg">{drink.sek_detay.sicaklik || '-'}</span></div>
+                  <div><span className="text-textMuted block text-xs md:text-sm uppercase tracking-widest mb-1 md:mb-2">Miktar</span><span className="text-sm md:text-lg">{drink.sek_detay.miktar || '-'}</span></div>
+                  <div className="md:col-span-3 pt-3 md:pt-4 border-t border-[#2a2015]"><span className="text-textMuted block text-xs md:text-sm uppercase tracking-widest mb-1 md:mb-2">Hazırlık</span><span className="text-sm md:text-lg leading-relaxed">{drink.sek_detay.hazirlik || '-'}</span></div>
                 </div>
               </div>
             )}
             
             {drink.mix_detay && drink.mix_detay.length > 0 && (
               <div>
-                <h3 className="font-serif text-3xl text-amberAccent mb-6">Karışımlar & Kokteyller</h3>
-                <div className="space-y-8">
+                <h3 className="font-serif text-xl md:text-3xl text-amberAccent mb-3 md:mb-6">Karışımlar & Kokteyller</h3>
+                <div className="space-y-4 md:space-y-8">
                   {drink.mix_detay.map((mix, idx) => (
-                    <div key={idx} className="bg-[#0f0a06] p-8 rounded-2xl border border-[#2a2015]">
-                      <h4 className="font-serif text-2xl font-semibold mb-4">{mix.isim}</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div key={idx} className="bg-[#0f0a06] p-4 md:p-8 rounded-xl md:rounded-2xl border border-[#2a2015]">
+                      <h4 className="font-serif text-md md:text-2xl font-semibold mb-2 md:mb-4">{mix.isim}</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                         <div>
-                          <span className="text-textMuted block text-sm uppercase tracking-widest mb-3">Malzemeler</span>
-                          <ul className="list-disc list-inside text-lg text-textMain space-y-2">
+                          <span className="text-textMuted block text-[10px] md:text-sm uppercase tracking-widest mb-1 md:mb-3">Malzemeler</span>
+                          <ul className="list-disc list-inside text-xs md:text-lg text-textMain space-y-0.5 md:space-y-2">
                             {mix.malzemeler.map((item, i) => <li key={i}>{item}</li>)}
                           </ul>
                         </div>
-                        <div className="space-y-4">
+                        <div className="space-y-2 md:space-y-4">
                           <div>
-                            <span className="text-amberAccent block text-sm uppercase tracking-widest mb-1">Nasıl</span>
-                            <p className="text-lg">{mix.hazirlanis}</p>
+                            <span className="text-amberAccent block text-[10px] md:text-sm uppercase tracking-widest mb-0.5">Nasıl</span>
+                             <p className="text-xs md:text-lg">{mix.hazirlanis}</p>
                           </div>
                           <div>
-                            <span className="text-amberAccent block text-sm uppercase tracking-widest mb-1">Neden İşliyor</span>
-                            <p className="text-lg">{mix.neden}</p>
+                            <span className="text-amberAccent block text-[10px] md:text-sm uppercase tracking-widest mb-0.5">Neden İşliyor</span>
+                             <p className="text-xs md:text-lg">{mix.neden}</p>
                           </div>
                           <div>
-                            <span className="text-amberAccent block text-sm uppercase tracking-widest mb-1">İdeal Ortam</span>
-                            <p className="text-lg">{mix.ortam}</p>
+                            <span className="text-amberAccent block text-[10px] md:text-sm uppercase tracking-widest mb-0.5">İdeal Ortam</span>
+                             <p className="text-xs md:text-lg">{mix.ortam}</p>
                           </div>
                         </div>
                       </div>
@@ -225,17 +225,17 @@ export default function DrinkDetail({ drink }) {
         {activeTab === 'eslesme' && (
           <div className="animate-tab-fade space-y-10">
             <div>
-              <h3 className="font-serif text-3xl text-amberAccent mb-6">Yemek Eşleşmesi</h3>
-              <p className="text-textMain text-xl leading-relaxed bg-[#0f0a06] p-8 rounded-2xl border border-[#2a2015]">{drink.yiyecek}</p>
+              <h3 className="font-serif text-xl md:text-3xl text-amberAccent mb-4 md:mb-6">Yemek Eşleşmesi</h3>
+              <p className="text-textMain text-sm md:text-xl leading-relaxed bg-[#0f0a06] p-4 md:p-8 rounded-2xl border border-[#2a2015]">{drink.yiyecek}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-               <div className="bg-[#0f0a06] p-8 rounded-2xl border border-[#2a2015]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-8">
+               <div className="bg-[#0f0a06] p-4 md:p-8 rounded-2xl border border-[#2a2015]">
                  <span className="text-sm text-textMuted block mb-3 uppercase tracking-widest">Müzik & His</span>
-                 <p className="text-xl leading-relaxed">{drink.muzik_his}</p>
+                 <p className="text-sm md:text-xl leading-relaxed">{drink.muzik_his}</p>
                </div>
-               <div className="bg-[#0f0a06] p-8 rounded-2xl border border-[#2a2015]">
+               <div className="bg-[#0f0a06] p-4 md:p-8 rounded-2xl border border-[#2a2015]">
                  <span className="text-sm text-textMuted block mb-3 uppercase tracking-widest">İdeal Mevsim</span>
-                 <p className="text-xl leading-relaxed">{drink.mevsim}</p>
+                 <p className="text-sm md:text-xl leading-relaxed">{drink.mevsim}</p>
                </div>
             </div>
           </div>
@@ -245,23 +245,23 @@ export default function DrinkDetail({ drink }) {
           <div className="animate-tab-fade space-y-12">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-12">
               <div>
-                <h3 className="font-serif text-3xl text-amberAccent mb-6">Doz (70kg birey)</h3>
-                <div className="bg-[#0f0a06] p-8 rounded-2xl border border-[#2a2015] space-y-6 text-lg">
+                <h3 className="font-serif text-xl md:text-3xl text-amberAccent mb-4 md:mb-6">Doz (70kg birey)</h3>
+                <div className="bg-[#0f0a06] p-4 md:p-8 rounded-2xl border border-[#2a2015] space-y-4 md:space-y-6 text-sm md:text-lg">
                   <div className="flex justify-between items-center border-b border-[#2a2015] pb-4">
                     <span className="text-textMuted uppercase tracking-widest text-sm">ABV</span>
-                    <span className="font-semibold text-xl">%{drink.abv_range}</span>
+                    <span className="font-semibold text-base md:text-xl">%{drink.abv_range}</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-[#2a2015] pb-4">
                     <span className="text-textMuted">Çakırkeyif</span>
-                    <span className="text-xl">{drink.kafa_dozu?.hafif}</span>
+                    <span className="text-base md:text-xl">{drink.kafa_dozu?.hafif}</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-[#2a2015] pb-4">
                     <span className="text-textMuted">İdeal Bölge</span>
-                    <span className="text-amberAccent font-bold text-xl">{drink.kafa_dozu?.ideal}</span>
+                    <span className="text-amberAccent font-bold text-base md:text-xl">{drink.kafa_dozu?.ideal}</span>
                   </div>
                   <div className="flex justify-between items-center border-b border-[#2a2015] pb-4">
                     <span className="text-textMuted">Limit Üstü</span>
-                    <span className="text-red-400 text-xl">{drink.kafa_dozu?.limit_ustu}</span>
+                    <span className="text-red-400 text-base md:text-xl">{drink.kafa_dozu?.limit_ustu}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-textMuted">Akşamdan Kalma Riski</span>
@@ -271,12 +271,12 @@ export default function DrinkDetail({ drink }) {
               </div>
 
               <div>
-                <h3 className="font-serif text-3xl text-amberAccent mb-6">Trivia</h3>
+                <h3 className="font-serif text-xl md:text-3xl text-amberAccent mb-4 md:mb-6">Trivia</h3>
                 <div className="space-y-8">
                   {drink.sozler && (
                     <div className="relative py-4">
-                      <span className="absolute top-0 left-0 text-7xl font-serif text-[#2a2015] leading-none select-none pointer-events-none">“</span>
-                      <blockquote className="pl-8 italic text-2xl text-textMuted leading-relaxed relative z-10 font-serif">
+                      <span className="absolute top-0 left-0 text-5xl md:text-7xl font-serif text-[#2a2015] leading-none select-none pointer-events-none">“</span>
+                      <blockquote className="pl-6 md:pl-8 italic text-base md:text-2xl text-textMuted leading-relaxed relative z-10 font-serif">
                         {drink.sozler}
                       </blockquote>
                     </div>
