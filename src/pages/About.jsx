@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { Wine, BookOpen, Heart, Compass, Droplets, GlassWater, Utensils, BarChart } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const pillars = [
   {
@@ -30,12 +31,9 @@ const scopeItems = [
 ];
 
 export default function About() {
-  useEffect(() => {
-    document.title = 'Hakkında | Kadeh';
-  }, []);
-
   return (
     <div className="flex-1 overflow-y-auto custom-scrollbar">
+      <SEO title="Hakkında" canonicalUrl="/hakkinda" description="Kadeh hakkında bilgi edinin. Kimin hazırladığı, vizyonumuz, manifesto ve sunduğumuz içerikler." />
       <div className="max-w-3xl mx-auto px-4 md:px-12 py-10 md:py-24">
 
         {/* Manifesto */}

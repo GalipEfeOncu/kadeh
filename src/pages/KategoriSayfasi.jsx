@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { drinks } from '../data/drinks';
 import { kategoriler } from '../data/kategoriler';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const ALKOL_ETIKET = { hafif: 'Hafif (%0-15)', orta: 'Orta (%15-30)', sert: 'Sert (%30+)' };
 const OLGUNLASMA_ETIKET = { fıçılanmış: 'Fıçılanmış', dinlendirilmemiş: 'Dinlendirilmemiş', karışım: 'Karışım' };
@@ -155,10 +156,6 @@ export default function KategoriSayfasi() {
     if (scrollRef.current) scrollRef.current.scrollTop = 0;
   }, [ana_tur]);
 
-  useEffect(() => {
-    if (kategori) document.title = `${kategori.name} | Kadeh`;
-  }, [kategori]);
-
   const mevcutOlgunlasma = [...new Set(tumDrinks.map(d => d.olgunlasma).filter(Boolean))];
   const mevcutAlkol = [...new Set(tumDrinks.map(d => d.alkol_seviye).filter(Boolean))];
 
@@ -180,6 +177,7 @@ export default function KategoriSayfasi() {
 
   return (
     <div ref={scrollRef} className="flex-1 overflow-y-auto custom-scrollbar">
+      <SEO title={kategori.name} canonicalUrl={`/tur/${kategori.id}`} description={kategori.aciklama} />
 
       {/* Üst bar */}
       <div className="sticky top-0 z-10 bg-darkBg border-b border-[#2a2015] px-4 lg:px-8 py-3 flex items-center gap-4">

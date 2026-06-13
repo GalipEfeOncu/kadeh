@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { drinks } from '../data/drinks';
 import { kategoriler } from '../data/kategoriler';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 function KategoriKart({ kategori, drinkSayisi, index, onClick }) {
   const ref = useRef(null);
@@ -115,10 +116,6 @@ export default function Home() {
   const heroRef = useRef(null);
 
   useEffect(() => {
-    document.title = 'Kadeh — Türkçe Alkol Rehberi';
-  }, []);
-
-  useEffect(() => {
     const el = scrollRef.current;
     const heroEl = heroRef.current;
     if (!el || !heroEl) return;
@@ -155,6 +152,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col flex-1 w-full h-full overflow-hidden bg-darkBg relative">
+      <SEO title="Türkçe Alkol Rehberi" canonicalUrl="/" />
       <div ref={scrollRef} className="flex-1 overflow-y-auto custom-scrollbar snap-y snap-mandatory scroll-smooth">
 
         {/* Hero */}
